@@ -9,7 +9,7 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
-        padding-top: vw(35);
+        padding-top: vw(22);
         @media all and (max-width: 1023px) {
             padding-top: 20px;
             flex-direction: column;
@@ -22,9 +22,11 @@
         font-size: vw(40);
         font-style: normal;
         font-weight: 500;
+        line-height: vw(48);
         @media all and (max-width: 1023px) {
             font-size: 25px;
             margin-bottom: 10px;
+            line-height: normal;
             text-align: left;
         }
     }
@@ -39,7 +41,7 @@
     }
     &__icons {
         display: flex;
-        margin-bottom: vw(20);
+        margin-bottom: vw(14);
         @media all and (max-width: 1023px) {
             margin-bottom: 10px;
             justify-content: flex-end;
@@ -75,9 +77,11 @@
         font-size: vw(20);
         font-style: normal;
         font-weight: 400;
-        margin-bottom: vw(10);
+        margin-bottom: vw(14);
+        line-height: vw(28);
         @media all and (max-width: 1023px) {
-            font-size: 18px;
+            font-size: 14px;
+            line-height: normal;
             margin-bottom: 10px;
         }
     }
@@ -92,7 +96,8 @@
         font-style: normal;
         font-weight: 600;
         @media all and (max-width: 1023px) {
-            font-size: 16px;
+            font-size: 12px;
+            font-weight: bold;
         }
     }
 }

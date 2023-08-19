@@ -76,12 +76,14 @@
         font-style: normal;
         font-weight: 500;
         margin-bottom: vw(10);
+        line-height: vw(80);
         span {
             color: #2D62A2;
         }
         @media all and (max-width: 1023px) {
             margin-bottom: 10px;
             font-size: 20px;
+            line-height: normal;
         }
     }
     &__subtitle {
@@ -90,7 +92,7 @@
         font-style: normal;
         font-weight: 400;
         text-transform: uppercase;
-        margin-bottom: vw(13);
+        margin-bottom: vw(22);
         @media all and (max-width: 1023px) {
             font-size: 14px;
         }
@@ -98,7 +100,7 @@
     &__item {
         display: flex;
         align-items: flex-end;
-        margin-bottom: vw(100);
+        margin-bottom: vw(108);
         @media all and (max-width: 1023px) {
             margin-bottom: 20px;
             flex-direction: column;
@@ -113,9 +115,11 @@
         font-style: normal;
         font-weight: 400;
         margin-right: vw(30);
+        line-height: vw(32);
         @media all and (max-width: 1023px) {
             margin-right: 0px;
             max-width: 300px;
+            line-height: normal;
             font-size: 14px;
             margin-bottom: 10px;
         }
@@ -195,7 +199,8 @@
             max-width: max-content;
             margin-right: 0px;
             padding: 10px 20px;
-            font-size: 16px;
+            font-size: 12px;
+            font-weight: bold;
             margin-bottom: 10px;
         }
     }
@@ -203,9 +208,11 @@
         color: #000;
         font-size: vw(18);
         font-style: normal;
+        line-height: vw(26);
         font-weight: 500;
         @media all and (max-width: 1023px) {
             font-size: 14px;
+            line-height: normal;
         }
     }
 }
