@@ -1108,7 +1108,7 @@ textarea {
   .first_block__title {
     font-size: 25px;
     margin-bottom: 10px;
-    text-align: center;
+    text-align: left;
   }
 
   .first_block__stars {
