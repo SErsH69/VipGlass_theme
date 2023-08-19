@@ -737,7 +737,7 @@ textarea {
   flex: 0 0 5.2083333333vw;
   overflow: hidden;
   border-radius: 50%;
-  border: 5px solid #2D62A2;
+  border: 0.2604166667vw solid #2D62A2;
 }
 
 .first_block__icon:not(:first-child) {
@@ -838,5 +838,46 @@ textarea {
 
   .header__burger {
     display: block;
+  }
+
+  .first_block__top {
+    padding-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first_block__title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .first_block__stars {
+    max-width: 315px;
+    width: 100%;
+  }
+
+  .first_block__icons {
+    margin-bottom: 10px;
+  }
+
+  .first_block__icon:not(:first-child) {
+    margin-left: -30px;
+  }
+
+  .first_block__icon {
+    width: 100px;
+    height: 100px;
+    flex: 0 0 100px;
+    border: 3px solid #2D62A2;
+  }
+
+  .first_block__tit {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .first_block__link {
+    font-size: 16px;
   }
 }

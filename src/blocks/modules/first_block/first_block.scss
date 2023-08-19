@@ -6,6 +6,11 @@
         align-items: flex-start;
         justify-content: space-between;
         padding-top: vw(35);
+        @media all and (max-width: 1023px) {
+            padding-top: 20px;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &__title {
         margin: 0;
@@ -13,14 +18,26 @@
         font-size: vw(40);
         font-style: normal;
         font-weight: 500;
+        @media all and (max-width: 1023px) {
+            font-size: 25px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
     }
     &__stars {
         width: vw(315);
         text-align: center;
+        @media all and (max-width: 1023px) {
+            max-width: 315px;
+            width: 100%;
+        }
     }
     &__icons {
         display: flex;
         margin-bottom: vw(20);
+        @media all and (max-width: 1023px) {
+            margin-bottom: 10px;
+        }
     }
     &__icon {
         width: vw(100);
@@ -28,9 +45,18 @@
         flex: 0 0 vw(100);
         overflow: hidden;
         border-radius: 50%;
-        border: 5px solid #2D62A2;
+        border: vw(5) solid #2D62A2;
         &:not(:first-child) {
             margin-left: vw(-28);
+            @media all and (max-width: 1023px) {
+                margin-left: -30px;
+            }
+        }
+        @media all and (max-width: 1023px) {
+            width: 100px;
+            height: 100px;
+            flex: 0 0 100px;
+            border: 3px solid #2D62A2;
         }
         img {
             width: 100%;
@@ -45,6 +71,10 @@
         font-style: normal;
         font-weight: 400;
         margin-bottom: vw(10);
+        @media all and (max-width: 1023px) {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
     }
     &__link {
         width: max-content;
@@ -56,5 +86,8 @@
         font-size: vw(16);
         font-style: normal;
         font-weight: 600;
+        @media all and (max-width: 1023px) {
+            font-size: 16px;
+        }
     }
 }
