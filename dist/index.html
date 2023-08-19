@@ -7,8 +7,8 @@
     <title>Главная</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap&_v=20230819190817" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?_v=20230819190817">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap&_v=20230819195351" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?_v=20230819195351">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -176,6 +176,7 @@
     </div>
 </header>
             <div class="first_block">
+    <div class="first_block__model" id="model-three"></div>
     <div class="first_block__in center_block">
         <div class="first_block__top">
             <h1 class="first_block__title">Эксклюзивные изделия <br>из стекла и зеркал</h1>
@@ -201,9 +202,48 @@
     </div>
 </div>
         </div>
-        <main>
-            <div class="main_slider">
-    
+        <main class="content">
+            <div class="main_slider center_block">
+    <div class="main_slider__slider js_main_slider">
+        <div class="main_slider__block" style="background: url('./img/bg_sl.jpg') 50% / cover no-repeat;">
+            <div class="main_slider__info">
+                <div class="main_slider__title"><span>Неповторимые</span><br> зеркальные панно</div>
+                <div class="main_slider__subtitle">и стеклянные конструкции от производителя</div>
+            </div>
+            <div class="main_slider__item">
+                <div class="main_slider__tit">Придадим вашему помещению оригинальности, воздушности и блеска!</div>
+                <div class="main_slider__bl">
+                    <div class="main_slider__img">
+                        <picture><source srcset="./img/img1.webp" type="image/webp"><img src="./img/img1.png" alt=""></picture>
+                    </div>
+                    <div class="main_slider__txt">Изготовление <br>заказа за 24 часа</div>
+                </div>
+            </div>
+            <div class="main_slider__buttons">
+                <button class="main_slider__button"><span>Оставить заявку</span></button>
+                <div class="main_slider__subtit">Закажите выезд замерщика <br>и консультацию по подбору материалов</div>
+            </div>
+        </div>
+        <div class="main_slider__block" style="background: url('./img/bg_sl.jpg') 50% / cover no-repeat;">
+            <div class="main_slider__info">
+                <div class="main_slider__title"><span>Неповторимые</span> зеркальные панно</div>
+                <div class="main_slider__subtitle">и стеклянные конструкции от производителя</div>
+            </div>
+            <div class="main_slider__item">
+                <div class="main_slider__tit">Придадим вашему помещению оригинальности, воздушности и блеска!</div>
+                <div class="main_slider__bl">
+                    <div class="main_slider__img">
+                        <picture><source srcset="./img/img1.webp" type="image/webp"><img src="./img/img1.png" alt=""></picture>
+                    </div>
+                    <div class="main_slider__txt">Изготовление <br>заказа за 24 часа</div>
+                </div>
+            </div>
+            <div class="main_slider__buttons">
+                <button class="main_slider__button"><span>Оставить заявку</span></button>
+                <div class="main_slider__subtit">Закажите выезд замерщика <br>и консультацию по подбору материалов</div>
+            </div>
+        </div>
+    </div>
 </div>
         </main>
         <footer class="footer"></footer>
@@ -221,6 +261,6 @@
     </div>
 </div>
     </div>
-    <script src="js/app.min.js?_v=20230819190817"></script>
+    <script src="js/app.min.js?_v=20230819195351"></script>
 </body>
 </html>

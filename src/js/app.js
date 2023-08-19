@@ -5,6 +5,8 @@ import Vue from 'vue/dist/vue.js';
 import $ from 'jquery';
 
 import Header from '../blocks/modules/header/header.js';
+import FirstBlock from '../blocks/modules/first_block/first_block.js';
+import MainSlider from '../blocks/modules/main_slider/main_slider.js';
 import Modals from '../blocks/modules/modals/modals.js';
 
 window.app = new Vue({
@@ -17,8 +19,10 @@ window.app = new Vue({
             window: window.innerWidth
         },
         header: new Header({
-            someVareible: 'someVareible'
+            isMobileMenuOpened: false
         }),
+        firstBlock: new FirstBlock(),
+        mainSlider: new MainSlider(),
         modals: new Modals({
             modalsSelector: "data-modal",
             modalsOpenerSelector: "data-modal-id",
@@ -33,6 +37,8 @@ window.app = new Vue({
     beforeMount() {
         this.isMounted = true;
         this.header.init();
+        this.firstBlock.init();
+        this.mainSlider.init();
         this.modals.init();
     },
     computed: {
