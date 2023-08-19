@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap&_v=20230819172457" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?_v=20230819172457">
+</head>
+<body>
+    <div class="wrapper" id="app" :class="{isMobile, isTablet}">
+        <header class="header center_block">
+    <a href="/" class="header__logo">
+        <img src="./img/logo.svg" alt="">
+    </a>
+    <div class="header__info">
+        <div class="header__adr">г. Люберцы, ул. 65 лет Победы, д.1 лит. 2д</div>
+        <a href="mailto:stekolnoedelo@mail.ru" class="header__mail">stekolnoedelo@mail.ru</a>
+    </div>
+    <div class="header__socs">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M34.8605 30.8333C34.8605 33.0579 33.0579 34.8605 30.8333 34.8605H9.16667C6.94288 34.8605 5.13953 33.0579 5.13953 30.8333V9.16667C5.13953 6.94208 6.94288 5.13953 9.16667 5.13953H30.8333C33.0579 5.13953 34.8605 6.94206 34.8605 9.16667V30.8333Z" fill="url(#paint0_linear_143_589)" stroke="url(#paint1_linear_143_589)" stroke-width="0.27907"/>
+                <path d="M29.9475 15.0345C29.9858 14.9087 30.0042 14.792 29.9992 14.6878C29.9867 14.3862 29.7792 14.167 29.2908 14.167H27.1092C26.5583 14.167 26.3042 14.5003 26.1558 14.8345C26.1558 14.8345 24.7958 17.6337 23.2283 19.4795C22.72 20.0137 22.4617 20.0003 22.1867 20.0003C22.0392 20.0003 21.6667 19.822 21.6667 19.3328V15.012C21.6667 14.4337 21.5225 14.167 21.0567 14.167H17.1825C16.8433 14.167 16.6667 14.4337 16.6667 14.7012C16.6667 15.257 17.415 15.3903 17.5 16.9478V19.967C17.5 20.7003 17.3725 20.8337 17.0975 20.8337C16.3558 20.8337 14.8958 18.3337 13.9183 15.057C13.7067 14.412 13.495 14.167 12.9442 14.167H10.7417C10.1058 14.167 10 14.4787 10 14.812C10 15.4128 10.5 18.6612 13.2292 22.3962C15.2083 25.1045 17.8158 26.667 20.1242 26.667C21.5225 26.667 21.6658 26.3112 21.6658 25.7553V23.2787C21.6667 22.6112 21.8192 22.5003 22.2642 22.5003C22.5817 22.5003 23.2292 22.7087 24.4792 24.167C25.9208 25.8487 26.1825 26.667 27.0092 26.667H29.1908C29.6975 26.667 29.9883 26.4545 30 26.042C30.0025 25.937 29.9875 25.8195 29.9533 25.6887C29.7917 25.2087 29.05 24.0353 28.125 22.917C27.6125 22.2978 27.1067 21.6845 26.8742 21.3512C26.7183 21.1337 26.6592 20.9803 26.6667 20.8337C26.6742 20.6795 26.7542 20.5328 26.8742 20.3278C26.8525 20.3278 29.6725 16.3687 29.9475 15.0345V15.0345Z" fill="white"/>
+                <defs>
+                <linearGradient id="paint0_linear_143_589" x1="20" y1="5" x2="20" y2="35" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2D62A2"/>
+                <stop offset="0.520833" stop-color="#0EAACC"/>
+                <stop offset="1" stop-color="#2D62A2"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear_143_589" x1="20" y1="5" x2="20" y2="35" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2D62A2"/>
+                <stop offset="0.520833" stop-color="#0EAACC"/>
+                <stop offset="1" stop-color="#2D62A2"/>
+                </linearGradient>
+                </defs>
+            </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="5.5" y="5.5" width="29" height="29" rx="9.5" fill="url(#paint0_linear_143_590)" stroke="url(#paint1_linear_143_590)"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33325 14.9997C8.33325 11.2894 11.2897 8.33301 14.9999 8.33301H24.9999C28.7102 8.33301 31.6666 11.2894 31.6666 14.9997V24.9997C31.6666 28.7099 28.7102 31.6663 24.9999 31.6663H14.9999C11.2897 31.6663 8.33325 28.7099 8.33325 24.9997V14.9997ZM24.9999 9.99968H14.9999C12.2102 9.99968 9.99992 12.2099 9.99992 14.9997V24.9997C9.99992 27.7894 12.2102 29.9997 14.9999 29.9997H24.9999C27.7897 29.9997 29.9999 27.7894 29.9999 24.9997V14.9997C29.9999 12.2099 27.7897 9.99968 24.9999 9.99968Z" fill="white"/>
+                <path d="M25.8333 14.1667C26.2936 14.1667 26.6667 13.7936 26.6667 13.3333C26.6667 12.8731 26.2936 12.5 25.8333 12.5C25.3731 12.5 25 12.8731 25 13.3333C25 13.7936 25.3731 14.1667 25.8333 14.1667Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M20.0001 15.8337C17.6989 15.8337 15.8334 17.6991 15.8334 20.0003C15.8334 22.3015 17.6989 24.167 20.0001 24.167C22.3013 24.167 24.1667 22.3015 24.1667 20.0003C24.1667 17.6991 22.3013 15.8337 20.0001 15.8337ZM14.1667 20.0003C14.1667 16.7787 16.7784 14.167 20.0001 14.167C23.2217 14.167 25.8334 16.7787 25.8334 20.0003C25.8334 23.222 23.2217 25.8336 20.0001 25.8336C16.7784 25.8336 14.1667 23.222 14.1667 20.0003Z" fill="white"/>
+                <defs>
+                <linearGradient id="paint0_linear_143_590" x1="20" y1="5" x2="20" y2="35" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2D62A2"/>
+                <stop offset="0.520833" stop-color="#0EAACC"/>
+                <stop offset="1" stop-color="#2D62A2"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear_143_590" x1="20" y1="5" x2="20" y2="35" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2D62A2"/>
+                <stop offset="0.520833" stop-color="#0EAACC"/>
+                <stop offset="1" stop-color="#2D62A2"/>
+                </linearGradient>
+                </defs>
+            </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.47279 19.9997C3.47279 10.872 10.8722 3.47254 19.9999 3.47254C29.1276 3.47254 36.5271 10.872 36.5271 19.9997C36.5271 29.1274 29.1276 36.5268 19.9999 36.5268C10.8722 36.5268 3.47279 29.1274 3.47279 19.9997Z" fill="url(#paint0_linear_143_591)" stroke="url(#paint1_linear_143_591)" stroke-width="0.27907"/>
+                <path d="M28.2916 12.5003L25.1699 28.4387C25.1699 28.4387 25.0358 29.167 24.1324 29.167C23.6524 29.167 23.4049 28.9387 23.4049 28.9387L16.6433 23.3278L13.3349 21.6603L9.08908 20.5312C9.08908 20.5312 8.33325 20.3128 8.33325 19.6878C8.33325 19.167 9.11075 18.9187 9.11075 18.9187L26.8741 11.862C26.8733 11.8612 27.4166 11.6662 27.8124 11.667C28.0557 11.667 28.3333 11.7712 28.3333 12.0837C28.3333 12.292 28.2916 12.5003 28.2916 12.5003H28.2916Z" fill="white"/>
+                <path d="M19.1666 25.4212L16.3116 28.2328C16.3116 28.2328 16.1874 28.3287 16.0216 28.3328C15.9641 28.3345 15.9024 28.3253 15.8391 28.297L16.6424 23.3262L19.1666 25.4212Z" fill="#B0BEC5"/>
+                <path d="M24.9141 15.1632C24.7733 14.9799 24.5133 14.9466 24.3299 15.0857L13.3333 21.6666C13.3333 21.6666 15.0883 26.5766 15.3558 27.4266C15.6241 28.2774 15.8391 28.2974 15.8391 28.2974L16.6424 23.3266L24.8357 15.7466C25.0191 15.6074 25.0532 15.3466 24.9141 15.1632H24.9141Z" fill="#CFD8DC"/>
+                <defs>
+                <linearGradient id="paint0_linear_143_591" x1="19.9999" y1="3.33301" x2="19.9999" y2="36.6663" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2D62A2"/>
+                <stop offset="0.520833" stop-color="#0EAACC"/>
+                <stop offset="1" stop-color="#2D62A2"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear_143_591" x1="19.9999" y1="3.33301" x2="19.9999" y2="36.6663" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2D62A2"/>
+                <stop offset="0.520833" stop-color="#0EAACC"/>
+                <stop offset="1" stop-color="#2D62A2"/>
+                </linearGradient>
+                </defs>
+            </svg>
+        </a>
+    </div>
+    <div class="header__items">
+        <a href="tel:88005004000" class="header__tel">8(800)500-4000</a>
+        <button class="header__button">обратный звонок</button>
+    </div>
+    <div class="header__burger" :class="{'isOpened': header.isMobileMenuOpened}">
+        <div class="header__burger--icon" @click.prevent="header.toogleMobileMenu.apply(header)"></div>
+        <div class="header__burger--body">
+            <div class="header__burger--top">
+                <div class="header__burger--logo">
+                    <img src="./img/logo.svg" alt="">
+                </div>
+                <div class="header__burger--close" @click.prevent="header.toogleMobileMenu.apply(header)"></div>
+            </div>
+            <div class="header__burger--info">
+                <div class="header__burger--tel">
+                    <span>Адрес:</span>
+                    <div>г. Люберцы, ул. 65 лет Победы, д.1 лит. 2д</div>
+                </div>
+                <div class="header__burger--tel">
+                    <span>Телефон:</span>
+                    <a href="tel:88005004000">8(800)500-4000</a>
+                </div>
+                <div class="header__burger--tel">
+                    <span>Почта:</span>
+                    <a href="mailto:stekolnoedelo@mail.ru">stekolnoedelo@mail.ru</a>
+                </div>
+                <div class="header__burger--tel">
+                    <span>Мессенджеры:</span>
+                </div>
+                <div class="header__burger--socs">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M34.8605 30.8333C34.8605 33.0579 33.0579 34.8605 30.8333 34.8605H9.16667C6.94288 34.8605 5.13953 33.0579 5.13953 30.8333V9.16667C5.13953 6.94208 6.94288 5.13953 9.16667 5.13953H30.8333C33.0579 5.13953 34.8605 6.94206 34.8605 9.16667V30.8333Z" fill="url(#paint0_linear_143_589)" stroke="url(#paint1_linear_143_589)" stroke-width="0.27907"/>
+                            <path d="M29.9475 15.0345C29.9858 14.9087 30.0042 14.792 29.9992 14.6878C29.9867 14.3862 29.7792 14.167 29.2908 14.167H27.1092C26.5583 14.167 26.3042 14.5003 26.1558 14.8345C26.1558 14.8345 24.7958 17.6337 23.2283 19.4795C22.72 20.0137 22.4617 20.0003 22.1867 20.0003C22.0392 20.0003 21.6667 19.822 21.6667 19.3328V15.012C21.6667 14.4337 21.5225 14.167 21.0567 14.167H17.1825C16.8433 14.167 16.6667 14.4337 16.6667 14.7012C16.6667 15.257 17.415 15.3903 17.5 16.9478V19.967C17.5 20.7003 17.3725 20.8337 17.0975 20.8337C16.3558 20.8337 14.8958 18.3337 13.9183 15.057C13.7067 14.412 13.495 14.167 12.9442 14.167H10.7417C10.1058 14.167 10 14.4787 10 14.812C10 15.4128 10.5 18.6612 13.2292 22.3962C15.2083 25.1045 17.8158 26.667 20.1242 26.667C21.5225 26.667 21.6658 26.3112 21.6658 25.7553V23.2787C21.6667 22.6112 21.8192 22.5003 22.2642 22.5003C22.5817 22.5003 23.2292 22.7087 24.4792 24.167C25.9208 25.8487 26.1825 26.667 27.0092 26.667H29.1908C29.6975 26.667 29.9883 26.4545 30 26.042C30.0025 25.937 29.9875 25.8195 29.9533 25.6887C29.7917 25.2087 29.05 24.0353 28.125 22.917C27.6125 22.2978 27.1067 21.6845 26.8742 21.3512C26.7183 21.1337 26.6592 20.9803 26.6667 20.8337C26.6742 20.6795 26.7542 20.5328 26.8742 20.3278C26.8525 20.3278 29.6725 16.3687 29.9475 15.0345V15.0345Z" fill="white"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_143_589" x1="20" y1="5" x2="20" y2="35" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2D62A2"/>
+                            <stop offset="0.520833" stop-color="#0EAACC"/>
+                            <stop offset="1" stop-color="#2D62A2"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_143_589" x1="20" y1="5" x2="20" y2="35" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2D62A2"/>
+                            <stop offset="0.520833" stop-color="#0EAACC"/>
+                            <stop offset="1" stop-color="#2D62A2"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5.5" y="5.5" width="29" height="29" rx="9.5" fill="url(#paint0_linear_143_590)" stroke="url(#paint1_linear_143_590)"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33325 14.9997C8.33325 11.2894 11.2897 8.33301 14.9999 8.33301H24.9999C28.7102 8.33301 31.6666 11.2894 31.6666 14.9997V24.9997C31.6666 28.7099 28.7102 31.6663 24.9999 31.6663H14.9999C11.2897 31.6663 8.33325 28.7099 8.33325 24.9997V14.9997ZM24.9999 9.99968H14.9999C12.2102 9.99968 9.99992 12.2099 9.99992 14.9997V24.9997C9.99992 27.7894 12.2102 29.9997 14.9999 29.9997H24.9999C27.7897 29.9997 29.9999 27.7894 29.9999 24.9997V14.9997C29.9999 12.2099 27.7897 9.99968 24.9999 9.99968Z" fill="white"/>
+                            <path d="M25.8333 14.1667C26.2936 14.1667 26.6667 13.7936 26.6667 13.3333C26.6667 12.8731 26.2936 12.5 25.8333 12.5C25.3731 12.5 25 12.8731 25 13.3333C25 13.7936 25.3731 14.1667 25.8333 14.1667Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.0001 15.8337C17.6989 15.8337 15.8334 17.6991 15.8334 20.0003C15.8334 22.3015 17.6989 24.167 20.0001 24.167C22.3013 24.167 24.1667 22.3015 24.1667 20.0003C24.1667 17.6991 22.3013 15.8337 20.0001 15.8337ZM14.1667 20.0003C14.1667 16.7787 16.7784 14.167 20.0001 14.167C23.2217 14.167 25.8334 16.7787 25.8334 20.0003C25.8334 23.222 23.2217 25.8336 20.0001 25.8336C16.7784 25.8336 14.1667 23.222 14.1667 20.0003Z" fill="white"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_143_590" x1="20" y1="5" x2="20" y2="35" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2D62A2"/>
+                            <stop offset="0.520833" stop-color="#0EAACC"/>
+                            <stop offset="1" stop-color="#2D62A2"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_143_590" x1="20" y1="5" x2="20" y2="35" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2D62A2"/>
+                            <stop offset="0.520833" stop-color="#0EAACC"/>
+                            <stop offset="1" stop-color="#2D62A2"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.47279 19.9997C3.47279 10.872 10.8722 3.47254 19.9999 3.47254C29.1276 3.47254 36.5271 10.872 36.5271 19.9997C36.5271 29.1274 29.1276 36.5268 19.9999 36.5268C10.8722 36.5268 3.47279 29.1274 3.47279 19.9997Z" fill="url(#paint0_linear_143_591)" stroke="url(#paint1_linear_143_591)" stroke-width="0.27907"/>
+                            <path d="M28.2916 12.5003L25.1699 28.4387C25.1699 28.4387 25.0358 29.167 24.1324 29.167C23.6524 29.167 23.4049 28.9387 23.4049 28.9387L16.6433 23.3278L13.3349 21.6603L9.08908 20.5312C9.08908 20.5312 8.33325 20.3128 8.33325 19.6878C8.33325 19.167 9.11075 18.9187 9.11075 18.9187L26.8741 11.862C26.8733 11.8612 27.4166 11.6662 27.8124 11.667C28.0557 11.667 28.3333 11.7712 28.3333 12.0837C28.3333 12.292 28.2916 12.5003 28.2916 12.5003H28.2916Z" fill="white"/>
+                            <path d="M19.1666 25.4212L16.3116 28.2328C16.3116 28.2328 16.1874 28.3287 16.0216 28.3328C15.9641 28.3345 15.9024 28.3253 15.8391 28.297L16.6424 23.3262L19.1666 25.4212Z" fill="#B0BEC5"/>
+                            <path d="M24.9141 15.1632C24.7733 14.9799 24.5133 14.9466 24.3299 15.0857L13.3333 21.6666C13.3333 21.6666 15.0883 26.5766 15.3558 27.4266C15.6241 28.2774 15.8391 28.2974 15.8391 28.2974L16.6424 23.3266L24.8357 15.7466C25.0191 15.6074 25.0532 15.3466 24.9141 15.1632H24.9141Z" fill="#CFD8DC"/>
+                            <defs>
+                            <linearGradient id="paint0_linear_143_591" x1="19.9999" y1="3.33301" x2="19.9999" y2="36.6663" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2D62A2"/>
+                            <stop offset="0.520833" stop-color="#0EAACC"/>
+                            <stop offset="1" stop-color="#2D62A2"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_143_591" x1="19.9999" y1="3.33301" x2="19.9999" y2="36.6663" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2D62A2"/>
+                            <stop offset="0.520833" stop-color="#0EAACC"/>
+                            <stop offset="1" stop-color="#2D62A2"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <main>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, soluta.</span>
+            <button data-modal-id="1">Modal1 Opener</button>
+            <button data-modal-id="2">Modal2 Opener</button>
+            <img src="img/icons/icons.svg#benefit_1" alt="benefit_1"/>
+            <picture><source srcset="img/download.webp" type="image/webp"><img src="img/download.png" width="100" alt=""></picture>
+            {{ isMounted }}
+        </main>
+        <footer class="footer"></footer>
+        <div class="modal" data-modal="1">
+    <div class="modal__in">
+        <div class="modal__closer"></div>
+        modal 1
+    </div>
+</div>
+
+<div class="modal" data-modal="2">
+    <div class="modal__in">
+        <div class="modal__closer"></div>
+        modal 2
+    </div>
+</div>
+    </div>
+    <script src="js/app.min.js?_v=20230819172457"></script>
+</body>
+</html>
