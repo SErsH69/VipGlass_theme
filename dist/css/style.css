@@ -855,7 +855,6 @@ textarea {
 
 .first_block__tit {
   color: #FFF;
-  text-align: center;
   font-size: 1.0416666667vw;
   font-style: normal;
   font-weight: 400;
@@ -1115,10 +1114,12 @@ textarea {
   .first_block__stars {
     max-width: 315px;
     width: 100%;
+    text-align: right;
   }
 
   .first_block__icons {
     margin-bottom: 10px;
+    justify-content: flex-end;
   }
 
   .first_block__icon:not(:first-child) {
@@ -1126,9 +1127,9 @@ textarea {
   }
 
   .first_block__icon {
-    width: 100px;
-    height: 100px;
-    flex: 0 0 100px;
+    width: 70px;
+    height: 70px;
+    flex: 0 0 70px;
     border: 3px solid #2D62A2;
   }
 
