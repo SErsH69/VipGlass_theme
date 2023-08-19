@@ -473,7 +473,22 @@ textarea {
   justify-content: space-between;
   align-items: center;
   padding-top: 1.0416666667vw;
+  position: fixed;
+  z-index: 100;
   padding-bottom: 1.0416666667vw;
+}
+
+.header.isFixed {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+.header.isFixed .header__adr,
+.header.isFixed .header__mail,
+.header.isFixed .header__tel {
+  color: #000;
 }
 
 .header__logo {
@@ -486,12 +501,12 @@ textarea {
 
 .header__info {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-right: 10px;
 }
 
 .header__adr {
-  color: #000;
+  color: #fff;
   font-size: 0.8333333333vw;
   font-style: normal;
   font-weight: 400;
@@ -514,7 +529,7 @@ textarea {
 }
 
 .header__mail {
-  color: #000;
+  color: #fff;
   font-size: 0.8333333333vw;
   font-style: normal;
   font-weight: 400;
@@ -560,7 +575,7 @@ textarea {
 }
 
 .header__tel {
-  color: #000;
+  color: #fff;
   text-align: center;
   text-decoration: none;
   font-size: 0.9375vw;
@@ -678,6 +693,84 @@ textarea {
 
 .header__burger--socs a:not(:first-child) {
   margin-left: 1px;
+}
+
+.header__burger .header__button {
+  display: block;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.first_block {
+  background: #000;
+  height: 100vh;
+}
+
+.first_block__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 1.8229166667vw;
+}
+
+.first_block__title {
+  margin: 0;
+  color: #FFF;
+  font-size: 2.0833333333vw;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.first_block__stars {
+  width: 16.40625vw;
+  text-align: center;
+}
+
+.first_block__icons {
+  display: flex;
+  margin-bottom: 1.0416666667vw;
+}
+
+.first_block__icon {
+  width: 5.2083333333vw;
+  height: 5.2083333333vw;
+  flex: 0 0 5.2083333333vw;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 5px solid #2D62A2;
+}
+
+.first_block__icon:not(:first-child) {
+  margin-left: -1.4583333333vw;
+}
+
+.first_block__icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.first_block__tit {
+  color: #FFF;
+  text-align: center;
+  font-size: 1.0416666667vw;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 0.5208333333vw;
+}
+
+.first_block__link {
+  width: -moz-max-content;
+  width: max-content;
+  background: var(--gradient-blue, linear-gradient(180deg, #2D62A2 0%, #0EAACC 52.08%, #2D62A2 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  font-size: 0.8333333333vw;
+  font-style: normal;
+  font-weight: 600;
 }
 
 .modal {

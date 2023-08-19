@@ -3,10 +3,21 @@
     justify-content: space-between;
     align-items: center;
     padding-top: vw(20);
+    position: fixed;
+    z-index: 100;
     padding-bottom: vw(20);
     @media all and (max-width: 1023px) {
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+    &.isFixed {
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        .header__adr, .header__mail, .header__tel {
+            color: #000;
+        }
     }
     &__logo {
         display: block;
@@ -20,14 +31,14 @@
     }
     &__info {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         margin-right: 10px;
         @media all and (max-width: 1023px) {
             display: none;
         }
     }
     &__adr {
-        color: #000;
+        color: #fff;
         font-size: vw(16);
         font-style: normal;
         font-weight: 400;
@@ -48,7 +59,7 @@
         }
     }
     &__mail {
-        color: #000;
+        color: #fff;
         font-size: vw(16);
         font-style: normal;
         font-weight: 400;
@@ -94,7 +105,7 @@
         }
     }
     &__tel {
-        color: #000;
+        color: #fff;
         text-align: center;
         text-decoration: none;
         font-size: vw(18);
@@ -201,6 +212,11 @@
                     margin-left: 1px;
                 }
             }
+        }
+        .header__button {
+            display: block;
+            margin-top: 15px;
+            font-size: 16px;
         }
     }
 }
