@@ -7,8 +7,8 @@
     <title>Главная</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap&_v=20230820170509" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?_v=20230820170509">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap&_v=20230820183327" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?_v=20230820183327">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
@@ -175,7 +175,7 @@
         </div>
     </div>
 </header>
-            <div class="first_block">
+            <section class="first_block" id="first_block">
     <div class="first_block__model" id="model-three"></div>
     <div class="first_block__in center_block">
         <div class="first_block__top">
@@ -200,10 +200,10 @@
             </div>
         </div>
     </div>
-</div>
+</section>
         </div>
         <main class="content">
-            <div class="main_slider center_block">
+            <section class="main_slider center_block" id="main_slider">
     <div class="main_slider__slider js_main_slider">
         <div class="main_slider__block" style="background: url('./img/bg_sl.jpg') 50% / cover no-repeat;">
             <div class="main_slider__info">
@@ -244,8 +244,8 @@
             </div>
         </div>
     </div>
-</div>
-            <div class="main_pref center_block">
+</section>
+            <section class="main_pref center_block" id="main_pref">
     <div class="main_pref__blocks">
         <div class="main_pref__block">
             <div class="main_pref__img">
@@ -266,8 +266,8 @@
             <div class="main_pref__text"><b>Реализуем проекты</b><br>на всей территории Москвы и области</div>
         </div>
     </div>
-</div>
-            <div class="main_prod center_block">
+</section>
+            <section class="main_prod center_block" id="main_prod">
     <div class="main_prod__title">Создаём эксклюзивные <br>изделия на заказ</div>
     <div class="main_prod__slider js_main_prod">
         <div class="main_prod__block">
@@ -307,7 +307,39 @@
             <div class="main_prod__text">Ограждения лестниц</div>
         </div>
     </div>
-</div>
+</section>
+            <section class="main_port center_block" id="main_port">
+    <div class="main_port__subtitle">Оцените наше портфолио</div>
+    <div class="main_port__title"><span>100% клиентов в восторге</span> от <br>результатов</div>
+    <div class="main_port__items">
+        <div class="main_port__top tabs">
+            <div class="tab-buttons">
+                <div class="tab active" data-tab="tab1">Зеркальное панно</div>
+                <div class="tab" data-tab="tab2">Ограждения лестниц</div>
+                <div class="tab" data-tab="tab3">Душевые перегородки</div>
+                <div class="tab" data-tab="tab4">Зеркала с подсветкой</div>
+                <div class="tab" data-tab="tab5">Бани, сауны, хаммамы</div>
+            </div>
+        </div>
+        <div class="tab-contents">
+            <div class="tab-content active" id="tab1">
+                1
+            </div>                
+            <div class="tab-content" id="tab2">
+                2
+            </div>                
+            <div class="tab-content" id="tab3">
+                3
+            </div>        
+            <div class="tab-content" id="tab4">
+                4
+            </div>        
+            <div class="tab-content" id="tab5">
+                5
+            </div>
+        </div>
+    </div>
+</section>
         </main>
         <footer class="footer center_block">
     <div class="footer__top">
@@ -404,6 +436,6 @@
     </div>
 </div>
     </div>
-    <script src="js/app.min.js?_v=20230820170509"></script>
+    <script src="js/app.min.js?_v=20230820183327"></script>
 </body>
 </html>
