@@ -835,6 +835,10 @@ textarea {
   height: auto;
 }
 
+.first_block__model * {
+  transition: unset;
+}
+
 .first_block__in {
   position: relative;
   z-index: 3;

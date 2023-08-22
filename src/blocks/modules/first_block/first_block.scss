@@ -24,6 +24,9 @@
             width: 100%;
             height: auto;
         }
+        * {
+            transition: unset;
+        }
     }
     &__in {
         position: relative;
