@@ -6,7 +6,6 @@ const FirstBlock = class FirstBlock {
 
     animBlock() {
         document.addEventListener('DOMContentLoaded', () => {
-            // Создаем сцену, камеру и рендерер
             const scene = new THREE.Scene();
             const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
             const renderer = new THREE.WebGLRenderer();
@@ -19,33 +18,43 @@ const FirstBlock = class FirstBlock {
                 camera.updateProjectionMatrix();
                 renderer.setSize(newWidth, newHeight);
             });
-            // Создаем загрузчик GLTF
+            
             const loader = new GLTFLoader();
+            let model;
+            let mixer; // Добавляем переменную для микшера анимаций
+            
             loader.load('files/scene.gltf', (gltf) => {
-                const model = gltf.scene;
+                model = gltf.scene;
                 scene.add(model);
         
-                // Позиционируем камеру
                 model.rotation.y += 0.01;
                 camera.position.x = 0;
                 camera.position.y = 1.5;
                 camera.position.z = 3.4;
         
-                model.scale.set(2, 2, 2); // Это увеличит модель вдвое по всем осям
+                model.scale.set(2, 2, 2);
+                
+                // Извлекаем анимацию из загруженной модели
+                mixer = new THREE.AnimationMixer(model);
+                const animations = gltf.animations;
+                if (animations && animations.length) {
+                    for (let i = 0; i < animations.length; i++) {
+                        mixer.clipAction(animations[i]).play(); // Запускаем анимацию
+                    }
+                }
+                
+                animate();
             });
             
-            // Создаем функцию для анимации
             const animate = () => {
                 requestAnimationFrame(animate);
                 
-                // Добавьте код анимации здесь
-                // model.rotation.x += 0.01;
-                // model.rotation.y += 0.01;
+                if (mixer) {
+                    mixer.update(0.01); // Обновляем состояние анимаций
+                }
                 
                 renderer.render(scene, camera);
             };
-            
-            animate();
         });
     }
 
