@@ -1356,6 +1356,119 @@ textarea {
   width: 100%;
 }
 
+.main_form {
+  padding-top: 3.6458333333vw;
+  padding-bottom: 6.25vw;
+  position: relative;
+}
+
+.main_form:before {
+  position: absolute;
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 35.4166666667vw;
+  height: 100%;
+  left: 0;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  background: rgba(158, 158, 158, 0.01);
+  filter: blur(5px);
+  -webkit-backdrop-filter: blur(0.5px);
+          backdrop-filter: blur(0.5px);
+}
+
+.main_form__in {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.main_form__l-side {
+  max-width: 44.2708333333vw;
+  width: 100%;
+}
+
+.main_form__title {
+  color: #FFF;
+  font-size: 2.1875vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.6041666667vw;
+  text-transform: uppercase;
+  margin-bottom: 5.2083333333vw;
+}
+
+.main_form__pref {
+  max-width: 23.4375vw;
+  width: 100%;
+}
+
+.main_form__pref--block {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main_form__pref--block:not(:last-child) {
+  margin-bottom: 1.5625vw;
+}
+
+.main_form__pref--img {
+  width: 6.9270833333vw;
+  margin-right: 1.5625vw;
+  flex: 0 0 6.9270833333vw;
+}
+
+.main_form__pref--text {
+  width: 100%;
+  color: #FFF;
+  font-size: 1.0416666667vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4583333333vw;
+}
+
+.main_form__r-side {
+  max-width: 30.2083333333vw;
+  width: 100%;
+  margin-left: auto;
+}
+
+.main_form__r-side form {
+  padding: 2.6041666667vw;
+  border-radius: 50px;
+  background: linear-gradient(180deg, rgba(255, 137, 29, 0.1) 0%, rgba(10, 137, 255, 0.1) 100%);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+.main_form__r-side form:before {
+  content: "";
+  width: 7.65625vw;
+  height: 42.4479166667vw;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  mix-blend-mode: hard-light;
+  top: -4.2708333333vw;
+  position: absolute;
+  pointer-events: none;
+  right: 8.1770833333vw;
+  transform: rotate(31deg);
+}
+
+.main_form__tit {
+  color: #000;
+  font-size: 1.5625vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.9791666667vw;
+  margin-bottom: 2.0833333333vw;
+}
+
 .footer {
   padding-top: 10.4166666667vw;
   padding-bottom: 10.4166666667vw;

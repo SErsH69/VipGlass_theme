@@ -1,0 +1,97 @@
+.main_form {
+    padding-top: vw(70);
+    padding-bottom: vw(120);
+    position: relative;
+    &:before {
+        position: absolute;
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: vw(680);
+        height: 100%;
+        left: 0;
+        pointer-events: none;
+        top: 0;
+        bottom: 0;
+        background: rgba(158, 158, 158, 0.01);
+        filter: blur(5px);
+        backdrop-filter: blur(0.5px);
+    }
+    &__in {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+    }
+    &__l-side {
+        max-width: vw(850);
+        width: 100%;
+    }
+    &__title {
+        color: #FFF;
+        font-size: vw(42);
+        font-style: normal;
+        font-weight: 400;
+        line-height: vw(50);
+        text-transform: uppercase;
+        margin-bottom: vw(100);
+    }
+    &__pref {
+        max-width: vw(450);
+        width: 100%;
+        &--block {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            &:not(:last-child) {
+                margin-bottom: vw(30);
+            }
+        }
+        &--img {
+            width: vw(133);
+            margin-right: vw(30);
+            flex: 0 0 vw(133);
+        }
+        &--text {
+            width: 100%;
+            color: #FFF;
+            font-size: vw(20);
+            font-style: normal;
+            font-weight: 400;
+            line-height: vw(28);
+        }
+    }
+    &__r-side {
+        max-width: vw(580);
+        width: 100%;
+        margin-left: auto;
+        form {
+            padding: vw(50);
+            border-radius: 50px;
+            background: linear-gradient(180deg, rgba(255, 137, 29, 0.10) 0%, rgba(10, 137, 255, 0.10) 100%);
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+            &:before {
+                content: '';
+                width: vw(147);
+                height: vw(815);
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.00) 100%);
+                mix-blend-mode: hard-light;
+                top: vw(-82);
+                position: absolute;
+                pointer-events: none;
+                right: vw(157);
+                transform: rotate(31deg);
+            }
+        }
+    }
+    &__tit {
+        color: #000;
+        font-size: vw(30);
+        font-style: normal;
+        font-weight: 400;
+        line-height: vw(38);
+        margin-bottom: vw(40);
+    }
+}
