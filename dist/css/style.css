@@ -1282,42 +1282,41 @@ textarea {
 }
 
 .main_port {
-  padding-top: 3.90625vw;
-  padding-bottom: 3.90625vw;
+  background: #F2F3F7;
+  padding-top: 2.6041666667vw;
+  padding-bottom: 5.2083333333vw;
 }
 
 .main_port__subtitle {
-  text-align: center;
-  margin-bottom: 0.5208333333vw;
-  color: var(--palette-black, #000);
-  font-size: 1.5625vw;
+  color: #000;
+  font-size: 0.9375vw;
   font-style: normal;
-  font-weight: 500;
-  line-height: 1.9791666667vw;
-  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.25vw;
+  margin-bottom: 1.5625vw;
+  max-width: 8.8541666667vw;
+  width: 100%;
 }
 
 .main_port__title {
   color: #000;
-  font-size: 3.125vw;
+  font-size: 1.6666666667vw;
   font-style: normal;
-  font-weight: 500;
-  line-height: 3.5416666667vw;
-  margin-bottom: 3.125vw;
-  text-align: center;
-}
-
-.main_port__title span {
-  color: #2D62A2;
-}
-
-.main_port .tabs {
-  margin-bottom: 2.6041666667vw;
+  font-weight: 400;
+  line-height: 1.875vw;
+  text-transform: uppercase;
+  margin-bottom: 1.5625vw;
 }
 
 .main_port .tab-buttons {
   display: flex;
-  justify-content: center;
+  margin-left: -0.78125vw;
+  overflow: auto;
+  width: -moz-max-content;
+  width: max-content;
+  margin-right: -0.78125vw;
+  padding-bottom: 1.0416666667vw;
+  padding-top: 1.0416666667vw;
 }
 
 .main_port .tab {
@@ -1333,18 +1332,19 @@ textarea {
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
   padding: 1.0416666667vw 2.0833333333vw;
   margin: 0 0.78125vw;
-  border-bottom: 4px solid transparent;
-  transition: unset;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
 }
 
 .main_port .tab.active {
-  border-color: #B48E2D;
-  background: var(--gold-gradient, linear-gradient(180deg, #AE8625 0%, #F7EF8A 32.81%, #D2AC47 67.71%, #EDC967 100%));
+  border-color: #02446C;
+  color: #1428A0;
+  box-shadow: unset;
 }
 
 .main_port .tab-content {
   display: none;
-  padding-top: 2.6041666667vw;
+  padding-top: 0.8333333333vw;
 }
 
 .main_port .tab-content.active {
@@ -1824,8 +1824,40 @@ textarea {
     line-height: normal;
   }
 
+  .main_port {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .main_port__subtitle {
+    max-width: 100%;
+    margin-bottom: 10px;
+    line-height: normal;
+    font-size: 14px;
+  }
+
+  .main_port__title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  .main_port .tab-buttons {
+    padding-bottom: 10px;
+    padding-top: 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .main_port .tab {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    line-height: normal;
+  }
+
   .main_port .tab-content {
-    padding-top: 30px;
+    padding-top: 10px;
   }
 
   .footer {

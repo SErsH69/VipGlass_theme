@@ -1,34 +1,55 @@
 .main_port {
-    padding-top: vw(75);
-    padding-bottom: vw(75);
+    background: #F2F3F7;
+    padding-top: vw(50);
+    padding-bottom: vw(100);
+    @media all and (max-width: 1023px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
     &__subtitle {
-        text-align: center;
-        margin-bottom: vw(10);
-        color: var(--palette-black, #000);
-        font-size: vw(30);
+        color: #000;
+        font-size: vw(18);
         font-style: normal;
-        font-weight: 500;
-        line-height: vw(38);
-        text-transform: uppercase;
+        font-weight: 400;
+        line-height: vw(24);
+        margin-bottom: vw(30);
+        max-width: vw(170);
+        width: 100%;
+        @media all and (max-width: 1023px) {
+            max-width: 100%;
+            margin-bottom: 10px;
+            line-height: normal;
+            font-size: 14px;
+        }
     }
     &__title {
         color: #000;
-        font-size: vw(60);
+        font-size: vw(32);
         font-style: normal;
-        font-weight: 500;
-        line-height: vw(68);
-        margin-bottom: vw(60);
-        text-align: center;
-        span {
-            color: #2D62A2;
+        font-weight: 400;
+        line-height: vw(36);
+        text-transform: uppercase;
+        margin-bottom: vw(30);
+        @media all and (max-width: 1023px) {
+            margin-bottom: 10px;
+            font-size: 20px;
+            line-height: normal;
         }
-    }
-    .tabs {
-        margin-bottom: vw(50);
     }
     .tab-buttons {
         display: flex;
-        justify-content: center;
+        margin-left: vw(-15);
+        overflow: auto;
+        width: max-content;
+        margin-right: vw(-15);
+        padding-bottom: vw(20);
+        padding-top: vw(20);
+        @media all and (max-width: 1023px) {
+            padding-bottom: 10px;
+            padding-top: 20px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
     }
     .tab {
         cursor: pointer;
@@ -43,18 +64,25 @@
         box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
         padding: vw(20) vw(40);
         margin: 0 vw(15);
-        border-bottom: 4px solid transparent;
-        transition: unset;
+        border-bottom: 2px solid transparent;
+        white-space: nowrap;
         &.active {
-            border-color: #B48E2D;
-            background: var(--gold-gradient, linear-gradient(180deg, #AE8625 0%, #F7EF8A 32.81%, #D2AC47 67.71%, #EDC967 100%));
+            border-color: #02446C;
+            color: #1428A0;
+            box-shadow: unset;
+        }
+        @media all and (max-width: 1023px) {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            line-height: normal;
         }
     }
     .tab-content {
         display: none;
-        padding-top: vw(50);
+        padding-top: vw(16);
         @media all and (max-width: 1023px) {
-            padding-top: 30px;
+            padding-top: 10px;
         }
     }
     .tab-content.active {
