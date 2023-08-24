@@ -31,9 +31,14 @@ body {
     flex-direction: column;
     position: relative;
 }
-
+.header_first {
+    position: relative;
+    z-index: 3;
+}
 .content {
     flex: 1 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .footer {

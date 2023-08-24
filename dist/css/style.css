@@ -517,8 +517,15 @@ body {
   position: relative;
 }
 
+.header_first {
+  position: relative;
+  z-index: 3;
+}
+
 .content {
   flex: 1 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .footer {
@@ -812,31 +819,14 @@ textarea {
   height: 100vh;
   margin-bottom: 2.0833333333vw;
   position: relative;
-  overflow: hidden;
 }
 
-.first_block__model {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
+.first_block #canvas {
   width: 100%;
-  height: 100%;
-  z-index: 2;
-}
-
-.first_block__model canvas {
-  position: absolute;
-  bottom: 0px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  height: auto;
-}
-
-.first_block__model * {
-  transition: unset;
+  height: 100vh;
+  position: fixed;
+  display: block;
+  pointer-events: none;
 }
 
 .first_block__in {
@@ -915,7 +905,7 @@ textarea {
 .main_slider {
   font-size: 0;
   padding-top: 2.0833333333vw;
-  padding-bottom: 2.6041666667vw;
+  padding-bottom: 3.125vw;
 }
 
 .main_slider__slider .slick-prev {

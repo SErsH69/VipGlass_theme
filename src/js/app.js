@@ -40,11 +40,13 @@ window.app = new Vue({
     beforeMount() {
         this.isMounted = true;
         this.header.init();
-        this.firstBlock.init();
         this.mainSlider.init();
         this.mainProd.init();
         this.mainPort.init();
         this.modals.init();
+    },
+    mounted() {
+        this.firstBlock.init();
     },
     computed: {
         isMobile: function () {
