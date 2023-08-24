@@ -44,8 +44,6 @@
   "dependencies": {
     "jquery": "^3.6.0",
     "slick-carousel": "^1.8.1",
-    "three": "^0.155.0",
-    "three-gltf-loader": "^1.111.0",
     "vue": "^2.6.14"
   }
 }

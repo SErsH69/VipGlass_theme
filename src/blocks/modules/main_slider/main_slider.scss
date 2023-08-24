@@ -65,21 +65,42 @@
     &__block {
         border-radius: 20px;
         overflow: hidden;
-        padding: vw(145) vw(100);
+        padding: vw(60) vw(70);
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 50%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 100%;
+            background: linear-gradient(81deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.00) 100%);
+            backdrop-filter: blur(2px);
+            z-index: 1;
+            pointer-events: none;
+        }
         @media all and (max-width: 1023px) {
             padding: 20px;
         }
     }
-    &__title {
-        color: #000;
-        font-size: vw(80);
-        font-style: normal;
-        font-weight: 500;
-        margin-bottom: vw(10);
-        line-height: vw(80);
-        span {
-            color: #2D62A2;
+    &__info {
+        position: relative;
+        z-index: 2;
+        width: 50%;
+        @media all and (max-width: 1023px) {
+            width: 100%;
         }
+    }
+    &__title {
+        color: #FFF;
+        font-size: vw(48);
+        font-style: normal;
+        font-weight: 400;
+        line-height: vw(60);
+        text-transform: uppercase;
+        margin-bottom: vw(28);
         @media all and (max-width: 1023px) {
             margin-bottom: 10px;
             font-size: 20px;
@@ -87,35 +108,39 @@
         }
     }
     &__subtitle {
-        color: #000;
-        font-size: vw(30);
+        color: #FFF;
+        font-size: vw(24);
         font-style: normal;
         font-weight: 400;
-        text-transform: uppercase;
-        margin-bottom: vw(22);
+        line-height: vw(30);
+        margin-bottom: vw(28);
         @media all and (max-width: 1023px) {
             font-size: 14px;
         }
     }
     &__item {
+        position: relative;
+        z-index: 2;
         display: flex;
         align-items: flex-end;
-        margin-bottom: vw(108);
+        margin-bottom: vw(50);
+        width: 50%;
         @media all and (max-width: 1023px) {
+            width: 100%;
             margin-bottom: 20px;
             flex-direction: column;
             align-items: flex-start;
         }
     }
     &__tit {
-        color: #000;
-        font-size: vw(24);
-        max-width: vw(377);
-        width: 100%;
+        color: #FFF;
+        font-size: vw(18);
         font-style: normal;
         font-weight: 400;
+        line-height: vw(26);
+        max-width: vw(377);
+        width: 100%;
         margin-right: vw(30);
-        line-height: vw(32);
         @media all and (max-width: 1023px) {
             margin-right: 0px;
             max-width: 300px;
@@ -127,6 +152,7 @@
     &__bl {
         display: flex;
         align-items: flex-end;
+        width: inherit;
     }
     &__img {
         flex: 0 0 vw(120);
@@ -141,18 +167,23 @@
     }
     &__txt {
         width: 100%;
-        color: #000;
-        font-size: vw(16);
+        color: #fff;
+        font-size: vw(14);
         font-style: normal;
         font-weight: 600;
+        line-height: vw(22);
         @media all and (max-width: 1023px) {
             font-size: 13px;
         }
     }
     &__buttons {
+        position: relative;
+        z-index: 2;
         display: flex;
         align-items: center;
+        width: 50%;
         @media all and (max-width: 1023px) {
+            width: 100%;
             align-items: flex-start;
             flex-direction: column;
         }
@@ -171,7 +202,7 @@
         padding: vw(20);
         border-radius: 10px;
         overflow: hidden;
-        background: linear-gradient(180deg, #139AC5 0%, #003E65 50.52%, #139AC5 100%);
+        background: linear-gradient(180deg, #1428A0 0%, #475DE1 30.21%, #475DE1 80.73%, #1428A0 100%);
         position: relative;
         span {
             position: relative;
@@ -190,7 +221,7 @@
             z-index: 1;
         }
         &:hover {
-            background: linear-gradient(180deg, #139AC5 0%, #003E65 0.01%, #139AC5 100%);
+            background: linear-gradient(180deg, #1428A0 0%, #1428A0 35.42%, #475DE1 99.99%, #1428A0 100%);
             &:before {
                 height: 2px;
             }
@@ -205,7 +236,7 @@
         }
     }
     &__subtit {
-        color: #000;
+        color: #fff;
         font-size: vw(18);
         font-style: normal;
         line-height: vw(26);
