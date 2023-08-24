@@ -85,6 +85,35 @@
                 transform: rotate(31deg);
             }
         }
+        label {
+            color: rgba(0, 0, 0, 0.40);
+            font-size: vw(14);
+            font-style: normal;
+            font-weight: 400;
+            line-height: vw(18);
+            margin-bottom: vw(25);
+            width: 100%;
+            display: block;
+        }
+        label ~ input {
+            color: #000;
+            font-size: vw(14);
+            border: 0;
+            background: none;
+            font-style: normal;
+            font-weight: 400;
+            width: 100%;
+            line-height: vw(18);
+            padding-bottom: vw(34);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.50);
+            margin-bottom: vw(15);
+            &::placeholder {
+                color: #000;
+                font-size: vw(14);
+                font-style: normal;
+                font-weight: 400;
+            }
+        }
     }
     &__tit {
         color: #000;
