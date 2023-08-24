@@ -10,6 +10,7 @@ const MainProd = class MainProd {
                 arrows: true,
                 gap: 20,
                 customPaging: '20',
+                infinite: false,
                 slidesToScroll: 1,
                 responsive: [
                     {

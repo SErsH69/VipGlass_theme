@@ -10,6 +10,7 @@ const MainSlider = class MainSlider {
             $('.js_main_slider').slick({
                 slidesToShow: 1,
                 arrows: true,
+                infinite: false,
                 adaptiveHeight: true,
                 slidesToScroll: 1
             });
