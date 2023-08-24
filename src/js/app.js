@@ -1,4 +1,9 @@
 import * as globalFunctions from './modules/functions.js';
+import { gsap } from "gsap";
+
+import { ScrollTrigger } from "gsap/ScrollTrigger.js";
+
+gsap.registerPlugin(ScrollTrigger);
 globalFunctions.isWebp();
 
 import Vue from 'vue/dist/vue.js';
@@ -32,7 +37,7 @@ window.app = new Vue({
             openedClass: "isOpened"
         })
     }),
-    beforeCreate() {        
+    beforeCreate() {
         window.addEventListener('resize', () => {
             this.sizes.window = window.innerWidth;
         });
@@ -47,6 +52,17 @@ window.app = new Vue({
     },
     mounted() {
         this.firstBlock.init();
+
+        gsap.to('.content', {
+            scrollTrigger: {
+                trigger: ".block.black",
+                markers: true,
+                start: "top+=200 top+=200",
+                end: "bottom+=200 top+=200",
+                scrub: 2,
+            },
+            scale: 1,
+        });
     },
     computed: {
         isMobile: function () {
