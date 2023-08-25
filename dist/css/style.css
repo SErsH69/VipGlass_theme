@@ -503,7 +503,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #FFF;
+  background: #000;
   height: 100%;
 }
 
@@ -526,8 +526,9 @@ body {
   flex: 1 0 auto;
   position: relative;
   z-index: 2;
-  transform: scale(0);
+  transform: scale(0) rotateY(90deg);
   transition: unset;
+  background: #fff;
 }
 
 .footer {
@@ -817,8 +818,7 @@ textarea {
 }
 
 .first_block {
-  background: #000;
-  height: 100vh;
+  height: 200vh;
   margin-bottom: 2.0833333333vw;
   position: relative;
 }
@@ -3243,6 +3243,28 @@ textarea {
     padding-bottom: 40px;
   }
 
+  .main_none__in {
+    flex-direction: column;
+    position: unset;
+  }
+
+  .main_none__title {
+    flex: none;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-top: 0;
+    line-height: normal;
+    padding-right: 0;
+  }
+
+  .main_none__blocks {
+    width: 100%;
+  }
+
+  .main_none .slick-slider {
+    position: relative;
+  }
+
   .main_none .slick-prev {
     width: 40px;
     height: 40px;
@@ -3269,6 +3291,20 @@ textarea {
     margin-left: 10px;
     margin-right: 10px;
     width: 200px;
+  }
+
+  .main_none__block:before {
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    margin-top: -25px;
+  }
+
+  .main_none__block:hover:before {
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
   }
 
   .main_equip {
@@ -3443,6 +3479,20 @@ textarea {
   .main_rewievs .slick-slide {
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .main_rewievs__video:before {
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    margin-left: -25px;
+  }
+
+  .main_rewievs__video:hover:before {
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
   }
 
   .main_face {

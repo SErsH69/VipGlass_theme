@@ -18,7 +18,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background: #FFF;
+    background: #000;
     height: 100%;
 }
 
@@ -39,8 +39,10 @@ body {
     flex: 1 0 auto;
     position: relative;
     z-index: 2;
-    transform: scale(0);
+    transform: scale(0) rotateY(90deg);
     transition: unset;
+    background: #fff;
+    // margin-top: -800vh;
 }
 
 .footer {

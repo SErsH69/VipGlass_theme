@@ -60,7 +60,9 @@ const FirstBlock = class FirstBlock {
                     trigger: ".block.black",
                     // markers: true,
                     start: "top top",
-                    end: "bottom top",
+                    end: () => {
+                        return `top+=${window.innerHeight + 3000}vh top`;
+                    },
                     scrub: 2,
                 },
                 z: -2,

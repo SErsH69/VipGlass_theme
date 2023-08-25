@@ -117,6 +117,12 @@
             top: 50%;
             pointer-events: none;
             background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='105' height='105' viewBox='0 0 105 105' fill='none'%3E%3Cg filter='url(%23filter0_b_12_3390)'%3E%3Ccircle cx='52.5' cy='52.5' r='52.5' fill='white' fill-opacity='0.5'/%3E%3C/g%3E%3Cpath d='M71.9318 52.5778L42.2727 69.7015L42.2727 35.4541L71.9318 52.5778Z' fill='black'/%3E%3Cdefs%3E%3Cfilter id='filter0_b_12_3390' x='-20' y='-20' width='145' height='145' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeGaussianBlur in='BackgroundImageFix' stdDeviation='10'/%3E%3CfeComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_12_3390'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_backgroundBlur_12_3390' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E") 50% / 100% no-repeat;
+            @media all and (max-width: 1023px) {
+                width: 50px;
+                height: 50px;
+                margin-top: -25px;
+                margin-left: -25px;
+            }
         }
         &:hover {
             &:before {
@@ -125,6 +131,12 @@
                 margin-top: vw(-91);
                 margin-left: vw(-91);
                 background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='183' height='184' viewBox='0 0 183 184' fill='none'%3E%3Cg filter='url(%23filter0_b_216_70)'%3E%3Ccircle cx='91.5' cy='92.4141' r='91.5' fill='white' fill-opacity='0.2'/%3E%3C/g%3E%3Cg filter='url(%23filter1_b_216_70)'%3E%3Ccircle cx='91.5' cy='92.4141' r='70.5' fill='white' fill-opacity='0.5'/%3E%3C/g%3E%3Cg filter='url(%23filter2_b_216_70)'%3E%3Ccircle cx='91.5' cy='92.5' r='52.5' fill='white'/%3E%3C/g%3E%3Cpath d='M110.932 92.5778L81.2727 109.701L81.2727 75.4541L110.932 92.5778Z' fill='black'/%3E%3Cdefs%3E%3Cfilter id='filter0_b_216_70' x='-20' y='-19.0859' width='223' height='223' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeGaussianBlur in='BackgroundImageFix' stdDeviation='10'/%3E%3CfeComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_216_70'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_backgroundBlur_216_70' result='shape'/%3E%3C/filter%3E%3Cfilter id='filter1_b_216_70' x='1' y='1.91406' width='181' height='181' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeGaussianBlur in='BackgroundImageFix' stdDeviation='10'/%3E%3CfeComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_216_70'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_backgroundBlur_216_70' result='shape'/%3E%3C/filter%3E%3Cfilter id='filter2_b_216_70' x='19' y='20' width='145' height='145' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeGaussianBlur in='BackgroundImageFix' stdDeviation='10'/%3E%3CfeComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_216_70'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_backgroundBlur_216_70' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E") 50% / 100% no-repeat;
+                @media all and (max-width: 1023px) {
+                    width: 100px;
+                    height: 100px;
+                    margin-top: -50px;
+                    margin-left: -50px;
+                }
             }
         }
         img {
