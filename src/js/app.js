@@ -15,6 +15,7 @@ import MainProd from '../blocks/modules/main_prod/main_prod.js';
 import MainPort from '../blocks/modules/main_port/main_port.js';
 
 
+import MainEquip from '../blocks/modules/main_equip/main_equip.js';
 import MainRewievs from '../blocks/modules/main_rewievs/main_rewievs.js';
 import MainDif from '../blocks/modules/main_difficult/main_difficult.js';
 import Modals from '../blocks/modules/modals/modals.js';
@@ -35,7 +36,8 @@ window.app = new Vue({
         mainSlider: new MainSlider(),
         mainProd: new MainProd(),
         mainPort: new MainPort(),
-
+        
+        mainEquip: new MainEquip(),
         mainRewievs: new MainRewievs(),
         mainDif: new MainDif(),
         modals: new Modals({
@@ -56,6 +58,7 @@ window.app = new Vue({
         this.mainProd.init();
         this.mainPort.init();
 
+        this.mainEquip.init();
         this.mainRewievs.init();
         this.mainDif.init();
         this.modals.init();
