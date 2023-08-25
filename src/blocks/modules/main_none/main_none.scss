@@ -1,0 +1,9 @@
+.main_none {
+    padding-top: vw(100);
+    padding-bottom: vw(100);
+    @media all and (max-width: 1023px) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+}

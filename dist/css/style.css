@@ -1561,6 +1561,11 @@ textarea {
   line-height: 1.1458333333vw;
 }
 
+.main_none {
+  padding-top: 5.2083333333vw;
+  padding-bottom: 5.2083333333vw;
+}
+
 .main_equip {
   padding-top: 5.2083333333vw;
   padding-bottom: 3.3854166667vw;
@@ -3115,6 +3120,11 @@ textarea {
     font-size: 12px;
     width: 50%;
     max-width: unset;
+  }
+
+  .main_none {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 
   .main_equip {
