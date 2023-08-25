@@ -1358,9 +1358,57 @@ textarea {
   width: 100%;
 }
 
+.main_face {
+  padding-top: 2.6041666667vw;
+  padding-bottom: 2.6041666667vw;
+  background: #F2F3F7;
+}
+
+.main_face__in {
+  display: flex;
+  align-items: center;
+}
+
+.main_face__l-side {
+  flex: 0 0 24.4791666667vw;
+  position: relative;
+  z-index: 2;
+  margin-right: -2.34375vw;
+}
+
+.main_face__title {
+  color: #000;
+  font-size: 3.125vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3.5416666667vw;
+  white-space: nowrap;
+  margin-bottom: 4.1666666667vw;
+}
+
+.main_face__title span {
+  color: #fff;
+}
+
+.main_face__text {
+  color: #000;
+  font-size: 0.9375vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3541666667vw;
+  max-width: 19.6354166667vw;
+  width: 100%;
+}
+
+.main_face__r-side {
+  position: relative;
+  z-index: 1;
+}
+
 .main_blocks {
   padding-top: 3.8541666667vw;
   padding-bottom: 2.8125vw;
+  margin-top: 2.6041666667vw;
   position: relative;
 }
 
@@ -2338,7 +2386,13 @@ textarea {
     padding-top: 10px;
   }
 
+  .main_face {
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+
   .main_blocks {
+    margin-top: 20px;
     padding-top: 40px;
     padding-bottom: 20px;
   }

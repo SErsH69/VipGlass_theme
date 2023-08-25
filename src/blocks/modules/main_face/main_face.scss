@@ -1,0 +1,44 @@
+.main_face {
+    padding-top: vw(50);
+    padding-bottom: vw(50);
+    background: #F2F3F7;
+    @media all and (max-width: 1023px) {
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+    &__in {
+        display: flex;
+        align-items: center;
+    }
+    &__l-side {
+        flex: 0 0 vw(470);
+        position: relative;
+        z-index: 2;
+        margin-right: vw(-45);
+    }
+    &__title {
+        color: #000;
+        font-size: vw(60);
+        font-style: normal;
+        font-weight: 400;
+        line-height: vw(68);
+        white-space: nowrap;
+        margin-bottom: vw(80);
+        span {
+            color: #fff;
+        }
+    }
+    &__text {
+        color: #000;
+        font-size: vw(18);
+        font-style: normal;
+        font-weight: 400;
+        line-height: vw(26);
+        max-width: vw(377);
+        width: 100%;
+    }
+    &__r-side {
+        position: relative;
+        z-index: 1;
+    }
+}
