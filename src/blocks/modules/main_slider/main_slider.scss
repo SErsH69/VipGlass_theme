@@ -85,6 +85,9 @@
             backdrop-filter: blur(2px);
             z-index: 1;
             pointer-events: none;
+            @media all and (max-width: 1023px) {
+                width: 100%;
+            }
         }
         @media all and (max-width: 1023px) {
             padding: 20px;
