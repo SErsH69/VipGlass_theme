@@ -12,7 +12,6 @@ const FirstBlock = class FirstBlock {
     animBlock() {
 
         const canvas = document.querySelector('#canvas');
-        console.log(canvas);
         const renderer = new THREE.WebGLRenderer({ antialias: true, canvas, alpha: true });
         const fov = 45;
         const aspect = 2; // the canvas default
