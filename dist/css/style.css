@@ -491,6 +491,7 @@ body {
   box-sizing: inherit;
   outline: none;
   scroll-behavior: smooth;
+  transition: all 0.3s ease;
 }
 
 .map-block,
@@ -526,6 +527,7 @@ body {
   position: relative;
   z-index: 2;
   transform: scale(0);
+  transition: unset;
 }
 
 .footer {
@@ -1356,10 +1358,87 @@ textarea {
   width: 100%;
 }
 
+.main_calc {
+  padding-top: 0.5208333333vw;
+  padding-bottom: 2.6041666667vw;
+  background: #F2F3F7;
+}
+
+.no-webp .main_calc__item {
+  background: url(../img/bg_ras.png) 0 0/100% no-repeat, linear-gradient(152deg, #FFD3C7 0%, #D6CEFE 29.69%, #D9D0F7 40.62%, #D0D5FF 52.08%, #A8B2FF 71.87%, #919EFF 100%); }
+
+.main_calc__item {
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.8541666667vw 4.0104166667vw;
+}
+
+.main_calc__title {
+  margin-left: auto;
+  margin-right: auto;
+  color: #020202;
+  font-size: 2.1875vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.6041666667vw;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  padding-left: 14.5833333333vw;
+}
+
+.main_calc__btn {
+  max-width: 15.1041666667vw;
+  width: 100%;
+  flex: 0 0 15.1041666667vw;
+  border: 0;
+  text-align: center;
+  color: #FFF;
+  font-size: 0.9375vw;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 1.0416666667vw;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #1428A0 0%, #475DE1 30.21%, #475DE1 80.73%, #1428A0 100%);
+  position: relative;
+}
+
+.main_calc__btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.main_calc__btn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: #02446C;
+  left: 0;
+  right: 0;
+  transition: unset;
+  z-index: 1;
+}
+
+.main_calc__btn:hover {
+  background: linear-gradient(180deg, #1428A0 0%, #1428A0 35.42%, #475DE1 99.99%, #1428A0 100%);
+}
+
+.main_calc__btn:hover:before {
+  height: 2px;
+}
+
 .main_form {
   padding-top: 3.6458333333vw;
   padding-bottom: 6.25vw;
   position: relative;
+  min-height: 100vh;
 }
 
 .main_form:before {
@@ -1439,7 +1518,7 @@ textarea {
 
 .main_form__r-side form {
   padding: 2.6041666667vw;
-  border-radius: 50px;
+  border-radius: 2.6041666667vw;
   background: linear-gradient(180deg, rgba(255, 137, 29, 0.1) 0%, rgba(10, 137, 255, 0.1) 100%);
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
@@ -1453,10 +1532,10 @@ textarea {
   height: 42.4479166667vw;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
   mix-blend-mode: hard-light;
-  top: -4.2708333333vw;
+  top: -7.8125vw;
   position: absolute;
   pointer-events: none;
-  right: 8.1770833333vw;
+  left: 5.2083333333vw;
   transform: rotate(31deg);
 }
 
@@ -1497,6 +1576,49 @@ textarea {
   font-size: 0.7291666667vw;
   font-style: normal;
   font-weight: 400;
+}
+
+.main_form__r-side input[type=submit] {
+  margin-top: 1.0416666667vw;
+  width: 100%;
+  border: 0;
+  text-align: center;
+  color: #FFF;
+  font-size: 0.9375vw;
+  font-style: normal;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 1.0416666667vw;
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(180deg, #1428A0 0%, #475DE1 30.21%, #475DE1 80.73%, #1428A0 100%);
+  position: relative;
+}
+
+.main_form__r-side input[type=submit] span {
+  position: relative;
+  z-index: 2;
+}
+
+.main_form__r-side input[type=submit]:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: #02446C;
+  left: 0;
+  right: 0;
+  transition: unset;
+  z-index: 1;
+}
+
+.main_form__r-side input[type=submit]:hover {
+  background: linear-gradient(180deg, #1428A0 0%, #1428A0 35.42%, #475DE1 99.99%, #1428A0 100%);
+}
+
+.main_form__r-side input[type=submit]:hover:before {
+  height: 2px;
 }
 
 .main_form__tit {
@@ -2012,6 +2134,110 @@ textarea {
     padding-top: 10px;
   }
 
+  .main_calc__btn {
+    max-width: -moz-max-content;
+    max-width: max-content;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .main_form {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .main_form:before {
+    width: 100%;
+    filter: blur(15px);
+    background: rgba(158, 158, 158, 0.5);
+  }
+
+  .main_form__in {
+    flex-direction: column;
+  }
+
+  .main_form__l-side {
+    max-width: 100%;
+  }
+
+  .main_form__title {
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+
+  .main_form__pref {
+    max-width: 350px;
+  }
+
+  .main_form__pref--block:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .main_form__pref--img {
+    width: 120px;
+    flex: 0 0 120px;
+    margin-right: 20px;
+  }
+
+  .main_form__pref--text {
+    line-height: normal;
+    font-size: 16px;
+  }
+
+  .main_form__r-side {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .main_form__r-side form {
+    padding: 30px;
+    border-radius: 30px;
+  }
+
+  .main_form__r-side form:before {
+    width: 147px;
+    height: 815px;
+    top: -150px;
+    left: 100px;
+  }
+
+  .main_form__r-side label {
+    font-size: 14px;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+
+  .main_form__r-side label ~ input {
+    margin-bottom: 15px;
+    padding-bottom: 30px;
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .main_form__r-side label ~ input::-moz-placeholder {
+    font-size: 14px;
+  }
+
+  .main_form__r-side label ~ input::placeholder {
+    font-size: 14px;
+  }
+
+  .main_form__r-side input[type=submit] {
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .main_form__tit {
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: 30px;
+  }
+
   .footer {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -2182,3 +2408,5 @@ textarea {
 .webp .main_pref__block:nth-child(2) { background: url(../img/bg2.webp) 50%/cover no-repeat; }
 
 .webp .main_pref__block:nth-child(3) { background: url(../img/bg3.webp) 50%/cover no-repeat; }
+
+.webp .main_calc__item { background: url(../img/bg_ras.webp) 0 0/100% no-repeat, linear-gradient(152deg, #FFD3C7 0%, #D6CEFE 29.69%, #D9D0F7 40.62%, #D0D5FF 52.08%, #A8B2FF 71.87%, #919EFF 100%); }

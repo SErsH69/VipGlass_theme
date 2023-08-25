@@ -111,7 +111,6 @@ const FirstBlock = class FirstBlock {
             }
             renderer.render(scene, camera);
             requestAnimationFrame(render);
-            console.log(globalModel);
             if (globalModel) {
                 globalModel.traverse(function (child) {
 

@@ -9,7 +9,7 @@ body {
     box-sizing: inherit;
     outline: none;
     scroll-behavior: smooth;
-    // transition: all .3s ease;
+    transition: all .3s ease;
 }
 .map-block, .map-block * {
     transition: unset;
@@ -40,6 +40,7 @@ body {
     position: relative;
     z-index: 2;
     transform: scale(0);
+    transition: unset;
 }
 
 .footer {
