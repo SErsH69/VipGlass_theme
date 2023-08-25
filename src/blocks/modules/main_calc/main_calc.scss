@@ -2,11 +2,9 @@
     padding-top: vw(10);
     padding-bottom: vw(50);
     background: #F2F3F7;
-    @media all and (max-wax-width: 1023px) {
-        
-    }
-    &__in {
-        
+    @media all and (max-width: 1023px) {
+        padding-top: 10px;
+        padding-bottom: 20px;
     }
     &__item {
         border-radius: 24px;
@@ -15,6 +13,14 @@
         align-items: center;
         justify-content: space-between;
         padding: vw(74) vw(77);
+        @media all and (max-width: 1023px) {
+            padding: 20px;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            border-radius: 20px;
+            background: linear-gradient(152deg, #FFD3C7 0%, #D6CEFE 29.69%, #D9D0F7 40.62%, #D0D5FF 52.08%, #A8B2FF 71.87%, #919EFF 100%) !important;
+        }
     }
     &__title {
         margin-left: auto;
@@ -28,6 +34,12 @@
         text-align: center;
         width: 100%;
         padding-left: vw(280);
+        @media all and (max-width: 1023px) {
+            padding-left: 0;
+            line-height: normal;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
     }
     &__btn {
         max-width: vw(290);
@@ -42,6 +54,7 @@
         text-decoration: none;
         cursor: pointer;
         padding: vw(20);
+        white-space: nowrap;
         border-radius: 10px;
         overflow: hidden;
         background: linear-gradient(180deg, #1428A0 0%, #475DE1 30.21%, #475DE1 80.73%, #1428A0 100%);
@@ -72,6 +85,7 @@
             max-width: max-content;
             padding: 10px 20px;
             font-size: 12px;
+            flex: none;
             font-weight: bold;
             margin-bottom: 10px;
         }

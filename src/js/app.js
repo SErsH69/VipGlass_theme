@@ -13,6 +13,9 @@ import FirstBlock from '../blocks/modules/first_block/first_block.js';
 import MainSlider from '../blocks/modules/main_slider/main_slider.js';
 import MainProd from '../blocks/modules/main_prod/main_prod.js';
 import MainPort from '../blocks/modules/main_port/main_port.js';
+
+
+import MainDif from '../blocks/modules/main_difficult/main_difficult.js';
 import Modals from '../blocks/modules/modals/modals.js';
 
 window.app = new Vue({
@@ -31,6 +34,8 @@ window.app = new Vue({
         mainSlider: new MainSlider(),
         mainProd: new MainProd(),
         mainPort: new MainPort(),
+
+        mainDif: new MainDif(),
         modals: new Modals({
             modalsSelector: "data-modal",
             modalsOpenerSelector: "data-modal-id",
@@ -48,6 +53,8 @@ window.app = new Vue({
         this.mainSlider.init();
         this.mainProd.init();
         this.mainPort.init();
+
+        this.mainDif.init();
         this.modals.init();
     },
     mounted() {
