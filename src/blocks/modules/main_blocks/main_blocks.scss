@@ -1,0 +1,119 @@
+.main_blocks {
+    padding-top: vw(74);
+    padding-bottom: vw(54);
+    position: relative;
+    @media all and (max-width: 1023px) {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        @media all and (max-width: 1023px) {
+            filter: blur(15px);
+            background: rgba(158, 158, 158, 0.5);
+        }
+    }
+    &__in {
+        display: flex;
+        position: relative;
+        z-index: 2;
+        justify-content: flex-end;
+    }
+    &__blocks {
+        margin-left: auto;
+        max-width: vw(900);
+        width: 100%;
+        margin-left: vw(-15);
+        margin-right: vw(-15);
+        display: flex;
+        flex-wrap: wrap;
+        @media all and (max-width: 1023px) {
+            max-width: 100%;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        @media all and (max-width: 720px) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    &__block {
+        margin-bottom: vw(20);
+        background: rgba(0, 0, 0, 0.50);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.10);
+        display: flex;
+        align-items: center;
+        width: calc(50% - vw(30));
+        margin-left: vw(15);
+        margin-right: vw(15);
+        @media all and (max-width: 1023px) {
+            margin-left: 15px;
+            margin-right: 15px;
+            width: calc(50% - 30px);
+            margin-bottom: 20px;
+            padding: 5px;
+        }
+        @media all and (max-width: 720px) {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        &--last {
+            text-align: center;
+            background: url("data:image/svg+xml,%3Csvg width='475' height='238' viewBox='0 0 475 238' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_d_51_4016)'%3E%3Cg clip-path='url(%23clip0_51_4016)'%3E%3Cg filter='url(%23filter1_b_51_4016)'%3E%3Crect x='20' y='16' width='435' height='198' fill='black' fill-opacity='0.5'/%3E%3C/g%3E%3Cg filter='url(%23filter2_f_51_4016)'%3E%3Cellipse cx='194' cy='154.5' rx='194' ry='154.5' transform='matrix(1 0 0 -1 35 257)' fill='url(%23paint0_linear_51_4016)'/%3E%3C/g%3E%3Cg filter='url(%23filter3_b_51_4016)'%3E%3Cellipse cx='194' cy='194.5' rx='194' ry='194.5' transform='matrix(1 0 0 -1 43 296)' fill='black' fill-opacity='0.2'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_d_51_4016' x='0' y='0' width='475' height='238' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dy='4'/%3E%3CfeGaussianBlur stdDeviation='10'/%3E%3CfeComposite in2='hardAlpha' operator='out'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0'/%3E%3CfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow_51_4016'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow_51_4016' result='shape'/%3E%3C/filter%3E%3Cfilter id='filter1_b_51_4016' x='0' y='-4' width='475' height='238' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeGaussianBlur in='BackgroundImageFix' stdDeviation='10'/%3E%3CfeComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_51_4016'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_backgroundBlur_51_4016' result='shape'/%3E%3C/filter%3E%3Cfilter id='filter2_f_51_4016' x='-55' y='-142' width='568' height='489' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='45' result='effect1_foregroundBlur_51_4016'/%3E%3C/filter%3E%3Cfilter id='filter3_b_51_4016' x='23' y='-113' width='428' height='429' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeGaussianBlur in='BackgroundImageFix' stdDeviation='10'/%3E%3CfeComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_51_4016'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_backgroundBlur_51_4016' result='shape'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_51_4016' x1='9.61098e-08' y1='14.7362' x2='395.183' y2='44.8674' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.0137' stop-color='%23FCCFD8'/%3E%3Cstop offset='0.166' stop-color='%23D2C2FF'/%3E%3Cstop offset='0.322045' stop-color='%237C90F6'/%3E%3Cstop offset='0.974' stop-color='%23748BFE'/%3E%3C/linearGradient%3E%3CclipPath id='clip0_51_4016'%3E%3Crect x='20' y='16' width='435' height='198' rx='20' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") 50% / 112% no-repeat;
+            padding: vw(40);
+            @media all and (max-width: 1023px) {
+                padding: 15px;
+            }
+        }
+    }
+    &__img {
+        flex: 0 0 vw(185);
+        width: vw(185);
+        height: vw(185);
+        @media all and (max-width: 1023px) {
+            flex: 0 0 100px;
+            width: 100px;
+            height: 100px;
+        }
+    }
+    &__info {
+        width: 100%;
+    }
+    &__title {
+        color: #FFF;
+        font-size: vw(20);
+        font-style: normal;
+        font-weight: 700;
+        line-height: vw(25);
+        margin-bottom: vw(30);
+        span {
+            font-weight: 400;
+        }
+        @media all and (max-width: 1023px) {
+            line-height: normal;
+            font-size: 14px;
+            line-height: normal;
+            margin-bottom: 10px;
+        }
+    }
+    &__text {
+        color: #FFF;
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: vw(24);
+        @media all and (max-width: 1023px) {
+            line-height: normal;
+            font-size: 13px;
+        }
+    }
+}
