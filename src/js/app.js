@@ -15,6 +15,7 @@ import MainProd from '../blocks/modules/main_prod/main_prod.js';
 import MainPort from '../blocks/modules/main_port/main_port.js';
 
 
+import MainRewievs from '../blocks/modules/main_rewievs/main_rewievs.js';
 import MainDif from '../blocks/modules/main_difficult/main_difficult.js';
 import Modals from '../blocks/modules/modals/modals.js';
 
@@ -35,6 +36,7 @@ window.app = new Vue({
         mainProd: new MainProd(),
         mainPort: new MainPort(),
 
+        mainRewievs: new MainRewievs(),
         mainDif: new MainDif(),
         modals: new Modals({
             modalsSelector: "data-modal",
@@ -54,6 +56,7 @@ window.app = new Vue({
         this.mainProd.init();
         this.mainPort.init();
 
+        this.mainRewievs.init();
         this.mainDif.init();
         this.modals.init();
     },
