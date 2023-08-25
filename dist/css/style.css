@@ -1360,13 +1360,14 @@ textarea {
 
 .main_face {
   padding-top: 2.6041666667vw;
-  padding-bottom: 2.6041666667vw;
-  background: #F2F3F7;
+  padding-bottom: 5.2083333333vw;
+  background: linear-gradient(0deg, rgb(242, 243, 247) 22%, rgb(242, 243, 247) 100%);
 }
 
 .main_face__in {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .main_face__l-side {
@@ -1374,10 +1375,11 @@ textarea {
   position: relative;
   z-index: 2;
   margin-right: -2.34375vw;
+  mix-blend-mode: difference;
 }
 
 .main_face__title {
-  color: #000;
+  color: #fff;
   font-size: 3.125vw;
   font-style: normal;
   font-weight: 400;
@@ -1386,12 +1388,8 @@ textarea {
   margin-bottom: 4.1666666667vw;
 }
 
-.main_face__title span {
-  color: #fff;
-}
-
 .main_face__text {
-  color: #000;
+  color: #fff;
   font-size: 0.9375vw;
   font-style: normal;
   font-weight: 400;
@@ -1400,15 +1398,42 @@ textarea {
   width: 100%;
 }
 
-.main_face__r-side {
-  position: relative;
-  z-index: 1;
+.main_face__info {
+  position: absolute;
+  max-width: 25vw;
+  z-index: 2;
+  width: 100%;
+  bottom: 2.6041666667vw;
+  right: 6.7708333333vw;
+  mix-blend-mode: exclusion;
+}
+
+.main_face__img {
+  font-size: 0;
+  width: 100%;
+}
+
+.main_face__name {
+  color: #FFF;
+  font-size: 0.8333333333vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25vw;
+  margin-bottom: 1.1458333333vw;
+}
+
+.main_face__work {
+  color: #FFF;
+  font-size: 1.5625vw;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.9791666667vw;
+  text-transform: uppercase;
 }
 
 .main_blocks {
   padding-top: 3.8541666667vw;
   padding-bottom: 2.8125vw;
-  margin-top: 2.6041666667vw;
   position: relative;
 }
 
@@ -2393,6 +2418,56 @@ textarea {
   .main_face {
     padding-top: 20px;
     margin-bottom: 20px;
+  }
+
+  .main_face__in {
+    flex-direction: column;
+  }
+
+  .main_face__l-side {
+    flex: none;
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .main_face__title {
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: 15px;
+  }
+
+  .main_face__text {
+    max-width: 100%;
+    line-height: normal;
+    font-size: 14px;
+  }
+
+  .main_face__info {
+    max-width: -moz-max-content;
+    max-width: max-content;
+    right: 20px;
+    bottom: 20px;
+    padding-right: 10px;
+  }
+
+  .main_face__r-side {
+    width: 100%;
+  }
+
+  .main_face__r-side img {
+    width: 100%;
+  }
+
+  .main_face__name {
+    font-size: 14px;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+
+  .main_face__work {
+    font-size: 13px;
+    line-height: normal;
   }
 
   .main_blocks {
