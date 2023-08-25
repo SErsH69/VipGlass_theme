@@ -13,6 +13,7 @@ import FirstBlock from '../blocks/modules/first_block/first_block.js';
 import MainSlider from '../blocks/modules/main_slider/main_slider.js';
 import MainProd from '../blocks/modules/main_prod/main_prod.js';
 import MainPort from '../blocks/modules/main_port/main_port.js';
+import MainStar from '../blocks/modules/main_stars/main_stars.js';
 
 
 import MainEquip from '../blocks/modules/main_equip/main_equip.js';
@@ -36,6 +37,7 @@ window.app = new Vue({
         mainSlider: new MainSlider(),
         mainProd: new MainProd(),
         mainPort: new MainPort(),
+        mainStar: new MainStar(),
         
         mainEquip: new MainEquip(),
         mainRewievs: new MainRewievs(),
@@ -57,6 +59,7 @@ window.app = new Vue({
         this.mainSlider.init();
         this.mainProd.init();
         this.mainPort.init();
+        this.mainStar.init();
 
         this.mainEquip.init();
         this.mainRewievs.init();
