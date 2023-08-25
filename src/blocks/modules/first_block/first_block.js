@@ -70,7 +70,7 @@ const FirstBlock = class FirstBlock {
             });
         }
         {
-            var texture = new THREE.TextureLoader().load('img/texture.png');
+            var texture = new THREE.TextureLoader().load('/dist/img/texture.png');
             var material = new THREE.MeshPhongMaterial({ map: texture });
 
             const objLoader = new OBJLoader();
