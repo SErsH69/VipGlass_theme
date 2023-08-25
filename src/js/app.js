@@ -14,7 +14,7 @@ import MainSlider from '../blocks/modules/main_slider/main_slider.js';
 import MainProd from '../blocks/modules/main_prod/main_prod.js';
 import MainPort from '../blocks/modules/main_port/main_port.js';
 import MainStar from '../blocks/modules/main_stars/main_stars.js';
-
+import MainNone from '../blocks/modules/main_none/main_none.js';
 
 import MainEquip from '../blocks/modules/main_equip/main_equip.js';
 import MainRewievs from '../blocks/modules/main_rewievs/main_rewievs.js';
@@ -38,6 +38,7 @@ window.app = new Vue({
         mainProd: new MainProd(),
         mainPort: new MainPort(),
         mainStar: new MainStar(),
+        mainNone: new MainNone(),
         
         mainEquip: new MainEquip(),
         mainRewievs: new MainRewievs(),
@@ -60,6 +61,7 @@ window.app = new Vue({
         this.mainProd.init();
         this.mainPort.init();
         this.mainStar.init();
+        this.mainNone.init();
 
         this.mainEquip.init();
         this.mainRewievs.init();
