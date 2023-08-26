@@ -74,7 +74,7 @@ window.app = new Vue({
         gsap.to('.content', {
             scrollTrigger: {
                 trigger: ".block.black",
-                markers: true,
+                // markers: true,
                 start: () => {
                     return `top  top`;
                 },
