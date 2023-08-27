@@ -14,7 +14,8 @@ const FirstBlock = class FirstBlock {
 
     animBlock() {
 
-        const canvas = document.querySelector('#canvas');
+        const canvas = document.querySelector('#canvas_glass');
+
         const renderer = new THREE.WebGLRenderer({ antialias: true, canvas, alpha: true });
         const fov = 45;
         const aspect = 2; // the canvas default
@@ -22,6 +23,7 @@ const FirstBlock = class FirstBlock {
         const far = 100;
         const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
         var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
         // var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
         // Позиция камеры в зависимости от разрешения
@@ -78,43 +80,37 @@ const FirstBlock = class FirstBlock {
             });
         }
         {
-            const hdrEquirect = new RGBELoader().load(
-                "files/space.hdr",
-                () => {
-                    hdrEquirect.mapping = THREE.EquirectangularReflectionMapping;
-                    scene.background = hdrEquirect;
-                    scene.enviroment = hdrEquirect;
 
-                    const material = new THREE.MeshPhysicalMaterial({
-                        roughness: 0.3,
-                        transmission: 1,
-                        envMap: hdrEquirect
-                    });
+            const material = new THREE.MeshStandardMaterial({
+                color: 'lightblue',
+                transparent: true,
+                opacity: 0.4,
+                metalness: 0.8,
+                roughness: 1,
+                transmission: 1
+            });
 
-                    const objLoader = new OBJLoader();
+            const objLoader = new OBJLoader();
 
-                    objLoader.load('files/model.obj', (root) => {
-                        globalModel = root;
+            objLoader.load('files/model.obj', (root) => {
+                globalModel = root;
 
-                        // console.log(globalModel);
+                // console.log(globalModel);
 
-                        globalModel.traverse(function (child) {
-                            console.log(child);
-                            if (child instanceof THREE.Mesh) {
+                globalModel.traverse(function (child) {
+                    console.log(child);
+                    if (child instanceof THREE.Mesh) {
 
-                                child.material = material;
-                                // child.texture = texture;
+                        child.material = material;
+                        // child.texture = texture;
 
-                            }
+                    }
 
-                        });
-                        scene.add(globalModel);
+                });
+                scene.add(globalModel);
 
-                        requestAnimationFrame(render);
-                    });
-
-                }
-            );
+                requestAnimationFrame(render);
+            });
 
         }
 
@@ -153,7 +149,6 @@ const FirstBlock = class FirstBlock {
 
 
 
-
     }
     addRotateAnimation() {
         gsap.to('.content__perspective', {
@@ -186,6 +181,12 @@ const FirstBlock = class FirstBlock {
     init() {
         this.animBlock();
         this.addRotateAnimation();
+
+        // const canvas2 = document.querySelector('#canvas2');
+        // let myFluid = new Fluid(canvas2);
+        // myFluid.activate();
+
+
     }
 }
 

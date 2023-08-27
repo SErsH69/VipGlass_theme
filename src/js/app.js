@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 
+import Fluid from 'fluid-canvas';
+
 gsap.registerPlugin(ScrollTrigger);
 globalFunctions.isWebp();
 
@@ -73,6 +75,39 @@ window.app = new Vue({
     },
     mounted() {
         this.firstBlock.init();
+
+
+        const canvas_fluid = document.getElementById('canvas');
+        let fluid = new Fluid(canvas_fluid);
+        fluid.mapBehaviors({
+            sim_resolution: 128,
+            dye_resolution: 512,
+
+            paused: false,
+            embedded_dither: false,
+
+            dissipation: .97,
+            velocity: .98,
+            pressure: .8,
+            pressure_iteration: 20,
+            curl: 0,
+            emitter_size: 0.7,
+
+            render_shaders: true,
+            multi_color: false,
+
+            render_bloom: true,
+            bloom_iterations: 8,
+            bloom_resolution: 256,
+            intensity: 0.8,
+            threshold: 0.6,
+            soft_knee: 0.7,
+
+            background_color: { r: 0, g: 0, b: 0 },
+            transparent: false
+        });
+        fluid.activate();
+        console.log(fluid);
     },
     computed: {
         isMobile: function () {
