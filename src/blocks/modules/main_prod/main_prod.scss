@@ -93,6 +93,20 @@
     .slick-slide {
         margin-left: vw(10);
         margin-right: vw(10);
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: vw(-5);
+            right: vw(-5);
+            bottom: vw(-5);
+            border-radius: vw(50);
+            left: vw(-5);
+            background: linear-gradient(323.54deg, #CCCCCC -61.29%, rgba(253, 253, 253, 0) 59.11%);
+            width: calc(100% + vw(10));
+            height: calc(100% + vw(10));
+            z-index: -1;
+        }
         @media all and (max-width: 1023px) {
             margin-left: 10px;
             margin-right: 10px;
@@ -101,7 +115,6 @@
     &__block {
         border-radius: vw(50);
         background: #FFF;
-        overflow: hidden;
         text-align: center;
         filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.10));
         padding: vw(16) vw(16) vw(20) vw(16);

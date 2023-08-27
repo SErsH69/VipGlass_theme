@@ -1280,12 +1280,26 @@ textarea {
 .main_prod .slick-slide {
   margin-left: 0.5208333333vw;
   margin-right: 0.5208333333vw;
+  position: relative;
+}
+
+.main_prod .slick-slide:before {
+  content: "";
+  position: absolute;
+  top: -0.2604166667vw;
+  right: -0.2604166667vw;
+  bottom: -0.2604166667vw;
+  border-radius: 2.6041666667vw;
+  left: -0.2604166667vw;
+  background: linear-gradient(323.54deg, #CCCCCC -61.29%, rgba(253, 253, 253, 0) 59.11%);
+  width: calc(100% + 0.5208333333vw);
+  height: calc(100% + 0.5208333333vw);
+  z-index: -1;
 }
 
 .main_prod__block {
   border-radius: 2.6041666667vw;
   background: #FFF;
-  overflow: hidden;
   text-align: center;
   filter: drop-shadow(0px 4px 9px rgba(0, 0, 0, 0.1));
   padding: 0.8333333333vw 0.8333333333vw 1.0416666667vw 0.8333333333vw;
