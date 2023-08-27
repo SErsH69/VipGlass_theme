@@ -158,6 +158,10 @@
             bottom: 35px;
             min-width: 300px;
         }
+        @media all and (max-width: 360px) {
+            font-size: 14px;
+            left: 20px;
+        }
     }
     &__img {
         width: vw(256);
@@ -169,9 +173,6 @@
             width: 100%;
             height: auto;
             border-radius: 30px;
-        }
-        @media all and (max-width: 680px) {
-            height: 250px;
         }
         img {
             width: 100%;

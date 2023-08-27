@@ -20,15 +20,9 @@ const MainStar = class MainStar {
                         }
                     },
                     {
-                        breakpoint: 680,
+                        breakpoint: 520,
                         settings: {
                             slidesToShow: 2
-                        }
-                    },
-                    {
-                        breakpoint: 500,
-                        settings: {
-                            slidesToShow: 1
                         }
                     }
                 ]

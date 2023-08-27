@@ -4638,12 +4638,6 @@ textarea {
   }
 }
 
-@media all and (max-width: 680px) {
-  .main_stars__img {
-    height: 250px;
-  }
-}
-
 @media all and (max-width: 600px) {
   .main_port__block {
     width: 100%;
@@ -4681,6 +4675,13 @@ textarea {
     width: calc(100% + 29px);
     padding-right: 0;
     margin-right: -29px;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .main_stars__tit {
+    font-size: 14px;
+    left: 20px;
   }
 }
 
