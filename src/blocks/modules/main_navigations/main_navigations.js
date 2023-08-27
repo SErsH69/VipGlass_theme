@@ -1,6 +1,3 @@
-import $ from 'jquery';
-import 'slick-carousel';
-
 const MainNavigation = class MainNavigation {
     constructor(){}
     initNavigation() {
@@ -17,31 +14,6 @@ const MainNavigation = class MainNavigation {
                     });
                     // Добавляем класс isActive к текущему блоку
                     block.classList.add('isActive');
-                });
-            });
-        
-            // Обработчик скролла
-            window.addEventListener('scroll', () => {
-                // Проверяем видимость каждого блока навигации
-                navigationBlocks.forEach(block => {
-                    const targetId = block.querySelector('a').getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    
-                    // Проверяем, что элемент найден
-                    if (targetElement) {
-                        // Получаем координаты верхней и нижней границы блока
-                        const rect = targetElement.getBoundingClientRect();
-                        const topVisible = rect.top >= 0;
-                        const bottomVisible = rect.bottom <= window.innerHeight;
-                        
-                        // Если блок виден на экране, добавляем класс isActive
-                        if (topVisible && bottomVisible) {
-                            navigationBlocks.forEach(navBlock => {
-                                navBlock.classList.remove('isActive');
-                            });
-                            block.classList.add('isActive');
-                        }
-                    }
                 });
             });
         });

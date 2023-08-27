@@ -80,7 +80,7 @@ window.app = new Vue({
         const canvas_fluid = document.getElementById('canvas');
         let fluid = new Fluid(canvas_fluid);
         fluid.mapBehaviors({
-            sim_resolution: 128,
+            sim_resolution: 100,
             dye_resolution: 512,
 
             paused: false,
@@ -94,7 +94,7 @@ window.app = new Vue({
             emitter_size: 0.7,
 
             render_shaders: true,
-            multi_color: false,
+            multi_color: true,
 
             render_bloom: true,
             bloom_iterations: 8,
