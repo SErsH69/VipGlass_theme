@@ -1646,6 +1646,11 @@ textarea {
   display: flex;
   position: relative;
   padding-left: 2.7083333333vw;
+  cursor: pointer;
+}
+
+.main_stars__block * {
+  pointer-events: none;
 }
 
 .main_stars__tit {
@@ -1859,6 +1864,10 @@ textarea {
   position: relative;
   cursor: pointer;
   border-radius: 24px;
+}
+
+.main_none__block * {
+  pointer-events: none;
 }
 
 .main_none__block:before {
@@ -2315,6 +2324,10 @@ textarea {
   position: relative;
   border-radius: 24px;
   cursor: pointer;
+}
+
+.main_rewievs__video * {
+  pointer-events: none;
 }
 
 .main_rewievs__video:before {
@@ -3170,9 +3183,31 @@ textarea {
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-  max-width: 320px;
+  max-width: 41.6666666667vw;
   padding: 1.0416666667vw;
+  border-radius: 1.0416666667vw;
+  position: relative;
   background: #fff;
+}
+
+.modal__closer {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  top: -20px;
+  padding: 1.0416666667vw;
+  border-radius: 50%;
+  right: -20px;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='30px' height='30px'%3E%3Cpath d='M 7 4 C 6.744125 4 6.4879687 4.0974687 6.2929688 4.2929688 L 4.2929688 6.2929688 C 3.9019687 6.6839688 3.9019687 7.3170313 4.2929688 7.7070312 L 11.585938 15 L 4.2929688 22.292969 C 3.9019687 22.683969 3.9019687 23.317031 4.2929688 23.707031 L 6.2929688 25.707031 C 6.6839688 26.098031 7.3170313 26.098031 7.7070312 25.707031 L 15 18.414062 L 22.292969 25.707031 C 22.682969 26.098031 23.317031 26.098031 23.707031 25.707031 L 25.707031 23.707031 C 26.098031 23.316031 26.098031 22.682969 25.707031 22.292969 L 18.414062 15 L 25.707031 7.7070312 C 26.098031 7.3170312 26.098031 6.6829688 25.707031 6.2929688 L 23.707031 4.2929688 C 23.316031 3.9019687 22.682969 3.9019687 22.292969 4.2929688 L 15 11.585938 L 7.7070312 4.2929688 C 7.5115312 4.0974687 7.255875 4 7 4 z'/%3E%3C/svg%3E") 50%/20px no-repeat;
+}
+
+.modal video,
+.modal iframe {
+  width: 100%;
+  height: 20.8333333333vw;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media all and (max-width: 1023px) {
@@ -4299,6 +4334,30 @@ textarea {
   .footer__done svg {
     width: 61px;
     height: 20px;
+  }
+
+  .modal__in {
+    max-width: 800px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(100% - 20px);
+  }
+
+  .modal__closer {
+    background-size: 20px;
+    width: 30px;
+    height: 30px;
+    top: -10px;
+    right: -10px;
+    padding: 0;
+  }
+
+  .modal video,
+  .modal iframe {
+    max-height: 600px;
+    height: 100%;
   }
 }
 

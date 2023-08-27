@@ -101,6 +101,10 @@
         display: flex;
         position: relative;
         padding-left: vw(52);
+        cursor: pointer;
+        * {
+            pointer-events: none;
+        }
         @media all and (max-width: 1023px) {
             padding-left: 50px;
         }

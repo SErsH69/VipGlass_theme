@@ -11,14 +11,28 @@ const Modals = class Modals {
     closeModal(id) {
         if (!document.querySelector(`[${this.modalsSelector}="${id}"]`)) return;
         document.querySelector(`[${this.modalsSelector}="${id}"]`).classList.remove(this.openedClass);
+        
+        
+        const modal = document.querySelector(`[${this.modalsSelector}="${id}"]`);
+        if (!modal) return;
+        const videos = modal.querySelectorAll('video');
+
+        videos.forEach(video => {
+            video.pause();
+        });
     }
     addClickListener() {
         document.addEventListener('click', (event) => {
-            event.preventDefault();
             if (event.target.dataset.modalId) {
+                event.preventDefault();
                 this.openModal(event.target.dataset.modalId);
             }
             if (!event.target.dataset.modalId && event.target.dataset.modal) {
+                event.preventDefault();
+                this.closeModal(document.querySelector(`[${this.modalsSelector}].isOpened`).dataset.modal);
+            }
+            if (event.target.closest('.modal__closer')) {
+                event.preventDefault();
                 this.closeModal(document.querySelector(`[${this.modalsSelector}].isOpened`).dataset.modal);
             }
         })

@@ -121,6 +121,9 @@
         position: relative;
         cursor: pointer;
         border-radius: 24px;
+        * {
+            pointer-events: none;
+        }
         &:before {
             content: '';
             position: absolute;
