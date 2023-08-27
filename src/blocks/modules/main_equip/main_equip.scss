@@ -137,6 +137,7 @@
         border-radius: vw(50);
         background: rgba(0, 0, 0, 0.50);
         backdrop-filter: blur(15px);
+        border: 2px solid rgba(217, 217, 217, 0.5);
         @media all and (max-width: 1023px) {
             border-radius: 20px;
             padding: 20px;
