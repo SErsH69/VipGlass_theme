@@ -15,7 +15,7 @@ import MainProd from '../blocks/modules/main_prod/main_prod.js';
 import MainPort from '../blocks/modules/main_port/main_port.js';
 import MainStar from '../blocks/modules/main_stars/main_stars.js';
 import MainNone from '../blocks/modules/main_none/main_none.js';
-
+import MainWork from '../blocks/modules/main_work/main_work.js';
 import MainEquip from '../blocks/modules/main_equip/main_equip.js';
 import MainRewievs from '../blocks/modules/main_rewievs/main_rewievs.js';
 import MainDif from '../blocks/modules/main_difficult/main_difficult.js';
@@ -39,7 +39,7 @@ window.app = new Vue({
         mainPort: new MainPort(),
         mainStar: new MainStar(),
         mainNone: new MainNone(),
-        
+        mainWork: new MainWork(),
         mainEquip: new MainEquip(),
         mainRewievs: new MainRewievs(),
         mainDif: new MainDif(),
@@ -62,7 +62,7 @@ window.app = new Vue({
         this.mainPort.init();
         this.mainStar.init();
         this.mainNone.init();
-
+        this.mainWork.init();
         this.mainEquip.init();
         this.mainRewievs.init();
         this.mainDif.init();

@@ -1,3 +1,6 @@
+import $ from 'jquery';
+import 'slick-carousel';
+
 const MainPort = class MainPort {
     constructor(){
     }  
@@ -42,8 +45,83 @@ const MainPort = class MainPort {
             }
         });
     }
+    initSlider() {
+        document.addEventListener('DOMContentLoaded', () => {
+            $('.js_main_tabs').slick({
+                slidesToShow: 1,
+                arrows: false,
+                infinite: false,
+                slidesToScroll: 1,
+                dots: true
+            });
+        });
+    }
+    moreBlocks() {
+        document.addEventListener('DOMContentLoaded', () => {
+            // Получаем все необходимые элементы
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            // Проходим по всем вкладкам
+            tabContents.forEach(tabContent => {
+                const blocks = tabContent.querySelectorAll('.main_port__block');
+                const moreButton = tabContent.querySelector('.main_port__more');
+                const visibleBlockCount = 4;
+                let visibleBlocks = visibleBlockCount;
+                
+                // Удаление слайдера
+                function destroySlider() {
+                    const sliders = tabContent.querySelectorAll('.js_main_tabs');
+                    sliders.forEach(slider => {
+                        $(slider).slick('unslick');
+                    });
+                }
+                
+                // Показываем или скрываем блоки в зависимости от видимости
+                function toggleBlocks() {
+                    destroySlider(); // Удаляем предыдущий слайдер
+                    
+                    blocks.forEach((block, index) => {
+                        if (index < visibleBlocks) {
+                            block.style.display = 'block';
+                        } else {
+                            block.style.display = 'none';
+                        }
+                    });
+        
+                    if (visibleBlocks >= blocks.length) {
+                        moreButton.style.display = 'none';
+                    } else {
+                        moreButton.style.display = 'block';
+                    }
+        
+                    // Инициализация нового слайдера
+                    const slidersToInit = tabContent.querySelectorAll('.js_main_tabs');
+                    slidersToInit.forEach(slider => {
+                        $(slider).slick({
+                            slidesToShow: 1,
+                            arrows: false,
+                            infinite: false,
+                            slidesToScroll: 1,
+                            dots: true
+                        });
+                    });
+                }
+                
+                // Скрываем лишние блоки при загрузке страницы
+                toggleBlocks();
+                
+                // Обработчик для кнопки "Еще проекты"
+                moreButton.addEventListener('click', () => {
+                    visibleBlocks += visibleBlockCount;
+                    toggleBlocks();
+                });
+            });
+        });
+    }
     init() {
         this.initTabs();
+        this.initSlider();
+        this.moreBlocks();
     }
 }
 

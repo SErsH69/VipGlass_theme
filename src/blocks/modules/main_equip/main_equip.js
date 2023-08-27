@@ -5,7 +5,6 @@ const MainEquip = class MainEquip {
     constructor() {}
 
     initSlider() {
-
         document.addEventListener('DOMContentLoaded', () => {
             $('.js_main_equip').slick({
                 slidesToShow: 3,
