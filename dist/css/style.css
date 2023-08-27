@@ -557,6 +557,7 @@ textarea {
 
 *::-webkit-scrollbar {
   width: 5px;
+  height: 3px;
 }
 
 /* Track */
@@ -1375,7 +1376,7 @@ textarea {
   overflow: hidden;
   width: calc(25% - 1.0416666667vw);
   margin-bottom: 1.0416666667vw;
-  border-radius: 20px;
+  border-radius: 1.0416666667vw;
   background: #FFF;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
 }
@@ -1464,6 +1465,7 @@ textarea {
 .main_port__bot {
   padding: 0.5208333333vw 1.0416666667vw 1.0416666667vw 1.0416666667vw;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -1476,6 +1478,7 @@ textarea {
   font-size: 0.9375vw;
   font-style: normal;
   font-weight: 500;
+  white-space: nowrap;
   cursor: pointer;
   padding: 1.0416666667vw;
   border-radius: 10px;
@@ -3446,6 +3449,27 @@ textarea {
     margin-bottom: 20px;
   }
 
+  .main_port__info {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-bottom: 10px;
+    padding: 15px;
+  }
+
+  .main_port__item {
+    line-height: normal;
+    font-size: 12px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .main_port__item span {
+    line-height: normal;
+    font-size: 12px;
+  }
+
   .main_port__btn {
     max-width: -moz-max-content;
     max-width: max-content;
@@ -3454,6 +3478,17 @@ textarea {
     font-size: 12px;
     font-weight: bold;
     margin-bottom: 10px;
+  }
+
+  .main_port__play {
+    width: 30px;
+    height: 30px;
+  }
+
+  .main_port__more {
+    font-size: 16px;
+    line-height: normal;
+    padding-right: 40px;
   }
 
   .main_stars {
@@ -4273,6 +4308,35 @@ textarea {
   }
 }
 
+@media all and (max-width: 800px) {
+  .main_port__blocks {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .main_port__block {
+    width: calc(50% - 20px);
+  }
+
+  .main_port__imgs {
+    height: 200px;
+  }
+
+  .main_port__imgs .slick-slide {
+    height: 200px;
+  }
+
+  .main_port__bot {
+    padding: 10px 15px 15px 15px;
+  }
+
+  .main_port__more:before {
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+  }
+}
+
 @media all and (max-width: 768px) {
   .main_pref__blocks {
     margin-left: 0;
@@ -4310,6 +4374,14 @@ textarea {
   }
 
   .main_blocks__block {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .main_port__block {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
