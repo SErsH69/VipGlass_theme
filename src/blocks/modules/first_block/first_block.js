@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
 import { gsap } from "gsap";
 
 
@@ -47,13 +47,9 @@ const FirstBlock = class FirstBlock {
 
         {
 
-            const color = 0xFFFFFF;
-            const intensity = 2.5;
-            const light = new THREE.DirectionalLight(color, intensity);
-            light.position.set(0, 10, 0);
-            light.target.position.set(- 5, 0, 0);
+            const light = new THREE.DirectionalLight(0xfff0dd, 1);
+            light.position.set(0, 5, 10);
             scene.add(light);
-            scene.add(light.target);
 
         }
 
@@ -82,40 +78,43 @@ const FirstBlock = class FirstBlock {
             });
         }
         {
-            // var texture = new THREE.TextureLoader().load('files/texture.png');
-            // var material = new THREE.MeshPhongMaterial({ map: texture });
-            const material = new THREE.MeshPhysicalMaterial({
-                roughness: 0,
-                transmission: 1,
-                thickness: 1.5
-            });
-            const objLoader = new OBJLoader();
-            objLoader.load('files/model.obj', (root) => {
-                globalModel = root;
+            const hdrEquirect = new RGBELoader().load(
+                "files/space.hdr",
+                () => {
+                    hdrEquirect.mapping = THREE.EquirectangularReflectionMapping;
+                    scene.background = hdrEquirect;
+                    scene.enviroment = hdrEquirect;
 
-                // console.log(globalModel);
+                    const material = new THREE.MeshPhysicalMaterial({
+                        roughness: 0.3,
+                        transmission: 1,
+                        envMap: hdrEquirect
+                    });
 
-                globalModel.traverse(function (child) {
-                    console.log(child);
-                    if (child instanceof THREE.Mesh) {
+                    const objLoader = new OBJLoader();
 
-                        child.material = material;
-                        // child.texture = texture;
+                    objLoader.load('files/model.obj', (root) => {
+                        globalModel = root;
 
-                    }
+                        // console.log(globalModel);
 
-                });
-                scene.add(globalModel);
-            });
+                        globalModel.traverse(function (child) {
+                            console.log(child);
+                            if (child instanceof THREE.Mesh) {
 
+                                child.material = material;
+                                // child.texture = texture;
 
+                            }
 
-            const bgTexture = new THREE.TextureLoader().load("/files/texture.png");
-            const bgGeometry = new THREE.PlaneGeometry(5, 5);
-            const bgMaterial = new THREE.MeshBasicMaterial({ map: bgTexture });
-            const bgMesh = new THREE.Mesh(bgGeometry, bgMaterial);
-            bgMesh.position.set(0, 0, -1);
-            scene.add(bgMesh);
+                        });
+                        scene.add(globalModel);
+
+                        requestAnimationFrame(render);
+                    });
+
+                }
+            );
 
         }
 
@@ -152,7 +151,7 @@ const FirstBlock = class FirstBlock {
             // }
         }
 
-        requestAnimationFrame(render);
+
 
 
     }
