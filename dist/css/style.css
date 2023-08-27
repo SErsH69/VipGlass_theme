@@ -822,6 +822,7 @@ textarea {
   height: 200vh;
   margin-bottom: 2.0833333333vw;
   position: relative;
+  padding-top: 4.375vw;
 }
 
 .first_block #canvas {
@@ -3404,6 +3405,7 @@ textarea {
 
   .first_block {
     margin-bottom: 20px;
+    padding-top: 65px;
   }
 
   .first_block__top {

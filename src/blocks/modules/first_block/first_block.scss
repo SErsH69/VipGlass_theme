@@ -2,8 +2,10 @@
     height: 200vh;
     margin-bottom: vw(40);
     position: relative;
+    padding-top: vw(84);
     @media all and (max-width: 1023px) {
         margin-bottom: 20px;
+        padding-top: 65px;
     }
     #canvas {
         width: 100%;
