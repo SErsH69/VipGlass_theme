@@ -18,7 +18,15 @@ const FirstBlock = class FirstBlock {
         const near = 0.1;
         const far = 100;
         const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-        camera.position.set(0.048613096583193814, 0.5789306422842851, 3.8393410178578407);
+        var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        
+        // Позиция камеры в зависимости от разрешения
+        if (screenWidth < 1024) {
+            camera.position.set(0.048613096583193814, 1.5789306422842851, 6.5393410178578407);
+        } else {
+            camera.position.set(0.048613096583193814, 0.5789306422842851, 3.8393410178578407);
+        }
         camera.rotation.set(-0.05018101139354198, -0.00015137332018180972, -0.000007602448675014163);
         let globalModel;
 
