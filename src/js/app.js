@@ -73,22 +73,6 @@ window.app = new Vue({
     },
     mounted() {
         this.firstBlock.init();
-
-        gsap.to('.content', {
-            scrollTrigger: {
-                trigger: ".block.black",
-                // markers: true,
-                start: () => {
-                    return `top  top`;
-                },
-                end: () => {
-                    return `top+=${window.innerHeight + 1000}vh top`;
-                },
-                scrub: 2,
-            },
-            scale: 1,
-            rotateY: 0,
-        });
     },
     computed: {
         isMobile: function () {

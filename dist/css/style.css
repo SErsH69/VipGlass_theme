@@ -519,16 +519,30 @@ body {
 
 .header_first {
   position: relative;
-  z-index: 3;
+  z-index: 1;
+}
+
+section:not(.main_slider) {
+  transition: opacity 0.3s ease;
+  opacity: 1;
 }
 
 .content {
-  flex: 1 0 auto;
-  position: relative;
   z-index: 2;
-  transform: scale(0) rotateY(90deg);
+  position: relative;
+  transform-style: preserve-3d;
+  perspective: 10000px;
   transition: unset;
-  background: #fff;
+}
+
+.content.allBlocksHidden .content__perspective > section:not(.main_slider) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.content.allBlocksHidden .content__perspective {
+  transform: scale(0) rotateY(90deg);
+  transform-origin: 50% 0;
 }
 
 .footer {

@@ -155,9 +155,37 @@ const FirstBlock = class FirstBlock {
 
 
     }
+    addRotateAnimation() {
+        gsap.to('.content__perspective', {
+            scrollTrigger: {
+                trigger: ".content",
+                markers: true,
+                pin: true,
+                start: () => {
+                    return `top-=${window.innerHeight / 2} top`;
+                },
+                end: () => {
+                    return `top+=2000 top`;
+                },
+                scrub: 1,
+                onEnter: () => {
+                    document.querySelector('.content').classList.add('allBlocksHidden');
+                },
+                onLeave: () => {
+                    document.querySelector('.content').classList.remove('allBlocksHidden');
+                },
+                onEnterBack() {
+                    document.querySelector('.content').classList.add('allBlocksHidden');
+                },
+            },
+            scale: 1,
+            rotateY: 0,
+        });
+    }
 
     init() {
         this.animBlock();
+        this.addRotateAnimation();
     }
 }
 
