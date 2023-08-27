@@ -1,6 +1,9 @@
 import * as THREE from 'three';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { gsap } from "gsap";
+
+
 
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
 
@@ -19,8 +22,8 @@ const FirstBlock = class FirstBlock {
         const far = 100;
         const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
         var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-        
+        // var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
         // Позиция камеры в зависимости от разрешения
         if (screenWidth < 1024) {
             camera.position.set(0.048613096583193814, 1.5789306422842851, 6.5393410178578407);
@@ -79,25 +82,40 @@ const FirstBlock = class FirstBlock {
             });
         }
         {
-            var texture = new THREE.TextureLoader().load('files/texture.png');
-            var material = new THREE.MeshPhongMaterial({ map: texture });
-
+            // var texture = new THREE.TextureLoader().load('files/texture.png');
+            // var material = new THREE.MeshPhongMaterial({ map: texture });
+            const material = new THREE.MeshPhysicalMaterial({
+                roughness: 0,
+                transmission: 1,
+                thickness: 1.5
+            });
             const objLoader = new OBJLoader();
             objLoader.load('files/model.obj', (root) => {
                 globalModel = root;
 
-                globalModel.traverse(function (child) {
+                // console.log(globalModel);
 
+                globalModel.traverse(function (child) {
+                    console.log(child);
                     if (child instanceof THREE.Mesh) {
 
                         child.material = material;
-                        child.texture = texture;
+                        // child.texture = texture;
 
                     }
 
                 });
                 scene.add(globalModel);
             });
+
+
+
+            const bgTexture = new THREE.TextureLoader().load("/files/texture.png");
+            const bgGeometry = new THREE.PlaneGeometry(5, 5);
+            const bgMaterial = new THREE.MeshBasicMaterial({ map: bgTexture });
+            const bgMesh = new THREE.Mesh(bgGeometry, bgMaterial);
+            bgMesh.position.set(0, 0, -1);
+            scene.add(bgMesh);
 
         }
 
@@ -120,18 +138,18 @@ const FirstBlock = class FirstBlock {
             }
             renderer.render(scene, camera);
             requestAnimationFrame(render);
-            if (globalModel) {
-                globalModel.traverse(function (child) {
+            // if (globalModel) {
+            //     globalModel.traverse(function (child) {
 
-                    if (child instanceof THREE.Mesh) {
+            //         if (child instanceof THREE.Mesh) {
 
-                        child.texture.offset.x = child.texture.offset.x + 0.0001; // 0.0 - 1.0
-                        child.texture.offset.y = child.texture.offset.y + 0.0001; // 0.0 - 1.0
+            //             child.texture.offset.x = child.texture.offset.x + 0.0001; // 0.0 - 1.0
+            //             child.texture.offset.y = child.texture.offset.y + 0.0001; // 0.0 - 1.0
 
-                    }
+            //         }
 
-                });
-            }
+            //     });
+            // }
         }
 
         requestAnimationFrame(render);
