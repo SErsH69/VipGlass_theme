@@ -1,9 +1,10 @@
 .main_pref {
+    background: #000;
     padding-top: vw(71);
-    padding-bottom: vw(30);
+    padding-bottom: vw(50);
     @media all and (max-width: 1023px) {
         padding-top: 20px;
-        padding-bottom: 00px;
+        padding-bottom: 0px;
     }
     &__blocks {
         display: flex;

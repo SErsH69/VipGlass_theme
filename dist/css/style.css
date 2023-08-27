@@ -1150,8 +1150,9 @@ textarea {
 }
 
 .main_pref {
+  background: #000;
   padding-top: 3.6979166667vw;
-  padding-bottom: 1.5625vw;
+  padding-bottom: 2.6041666667vw;
 }
 
 .main_pref__blocks {
@@ -1202,7 +1203,6 @@ textarea {
 }
 
 .main_prod {
-  margin-top: 2.6041666667vw;
   padding-top: 6.3541666667vw;
   padding-bottom: 2.6041666667vw;
   background: #F2F3F7;
@@ -3441,7 +3441,6 @@ textarea {
   }
 
   .main_prod {
-    margin-top: 40px;
     padding-top: 40px;
     padding-bottom: 10px;
   }

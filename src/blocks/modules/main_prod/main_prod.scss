@@ -1,11 +1,9 @@
 .main_prod {
-    margin-top: vw(50);
     padding-top: vw(122);
     padding-bottom: vw(50);
     background: #F2F3F7;
     overflow: hidden;
     @media all and (max-width: 1023px) {
-        margin-top: 40px;
         padding-top: 40px;
         padding-bottom: 10px;
     }
