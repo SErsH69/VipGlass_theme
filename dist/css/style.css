@@ -4638,6 +4638,12 @@ textarea {
   }
 }
 
+@media all and (max-width: 680px) {
+  .main_stars__img {
+    height: 250px;
+  }
+}
+
 @media all and (max-width: 600px) {
   .main_port__block {
     width: 100%;

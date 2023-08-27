@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
-    
+<body>    
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
+        @@include('blocks/modules/main__navigations/main__navigations.html', {})
         <div class="header_first">
             @@include('blocks/modules/header/header.html', {})
             @@include('blocks/modules/first_block/first_block.html', {})
