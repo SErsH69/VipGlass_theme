@@ -131,8 +131,8 @@
     &__block {
         width: calc(33.3% - vw(20));
         margin-bottom: vw(20);
-        margin-left: vw(10);
-        margin-right: vw(10);
+        margin-left: vw(5);
+        margin-right: vw(5);
         padding: vw(50) vw(30);
         border-radius: vw(50);
         background: rgba(0, 0, 0, 0.50);
@@ -249,16 +249,16 @@
         }
     }
     .slick-list {
-        margin-left: vw(-10);
-        margin-right: vw(-10);
+        margin-left: vw(-5);
+        margin-right: vw(-5);
         @media all and (max-width: 1023px) {
             margin-left: 10px;
             margin-right: 10px;
         }
     }
     .slick-slide {
-        margin-left: vw(10);
-        margin-right: vw(10);
+        margin-left: vw(5);
+        margin-right: vw(5);
         width: vw(415);
         @media all and (max-width: 1023px) {
             margin-left: 10px;

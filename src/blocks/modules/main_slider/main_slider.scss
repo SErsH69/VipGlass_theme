@@ -1,7 +1,9 @@
 .main_slider {
+    width: 100%;
     font-size: 0;
     padding-top: vw(40);
     padding-bottom: vw(60);
+    background: #000;
     @media all and (max-width: 1023px) {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -157,10 +159,37 @@
             margin-bottom: 10px;
         }
     }
+    @keyframes gradientAnimation {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+    }
     &__bl {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         width: inherit;
+        border-radius: 20px;
+        border: vw(5) solid #475DE1;
+        padding: vw(5);
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: vw(-5);
+            border-radius: 20px;
+            right: vw(-5);
+            bottom: vw(-5);
+            z-index: -1;
+            animation: gradientAnimation 5s infinite;
+            left: vw(-5);
+            background: linear-gradient(180deg, #1428A0 0%, #475DE1 30.21%, #475DE1 80.73%, #1428A0 100%);
+        }
     }
     &__img {
         flex: 0 0 vw(120);
