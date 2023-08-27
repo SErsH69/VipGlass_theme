@@ -59,6 +59,9 @@ section:not(.main_slider) {
         transform: scale(0) rotateY(90deg);        
         transform-origin: 50% 0;
     }
+    &__perspective {
+        transition: none;
+    }
 }
 
 .footer {
