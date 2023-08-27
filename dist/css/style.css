@@ -1620,6 +1620,17 @@ textarea {
   position: relative;
 }
 
+.main_stars__more {
+  color: #FFF;
+  font-size: 0.9375vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3541666667vw;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 9.8958333333vw;
+}
+
 .main_stars__in {
   display: flex;
 }
@@ -3679,6 +3690,10 @@ textarea {
     margin-bottom: 20px;
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+
+  .main_stars__more {
+    display: none;
   }
 
   .main_stars__in {

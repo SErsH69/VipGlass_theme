@@ -10,6 +10,19 @@
         padding-top: 40px;
         padding-bottom: 40px;
     }
+    &__more {
+        color: #FFF;
+        font-size: vw(18);
+        font-style: normal;
+        font-weight: 600;
+        line-height: vw(26);
+        text-transform: uppercase;
+        position: absolute;
+        bottom: vw(190);
+        @media all and (max-width: 1023px) {
+            display: none;
+        }
+    }
     &__in {
         display: flex;
         @media all and (max-width: 1023px) {
