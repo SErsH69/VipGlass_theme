@@ -82,7 +82,7 @@
             top: 0;
             height: 100%;
             background: linear-gradient(81deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.00) 100%);
-            backdrop-filter: blur(2px);
+            backdrop-filter: blur(1px);
             z-index: 1;
             pointer-events: none;
             @media all and (max-width: 1023px) {
