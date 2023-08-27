@@ -8,6 +8,7 @@ globalFunctions.isWebp();
 
 import Vue from 'vue/dist/vue.js';
 
+import MainNavigation from '../blocks/modules/main_navigations/main_navigations.js';
 import Header from '../blocks/modules/header/header.js';
 import FirstBlock from '../blocks/modules/first_block/first_block.js';
 import MainSlider from '../blocks/modules/main_slider/main_slider.js';
@@ -30,6 +31,7 @@ window.app = new Vue({
             mobile: 768,
             window: window.innerWidth
         },
+        mainNavigation: new MainNavigation(),
         header: new Header({
             isMobileMenuOpened: false
         }),
@@ -56,6 +58,7 @@ window.app = new Vue({
     },
     beforeMount() {
         this.isMounted = true;
+        this.mainNavigation.init();
         this.header.init();
         this.mainSlider.init();
         this.mainProd.init();
