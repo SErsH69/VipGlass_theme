@@ -9,7 +9,7 @@ const MainWork = class MainWork {
         document.addEventListener('DOMContentLoaded', () => {
             $('.js_main_work').slick({
                 slidesToShow: 3,
-                arrows: false,
+                arrows: true,
                 variableWidth: true,
                 centerMode: true,
                 focusOnSelect: true,
@@ -17,7 +17,7 @@ const MainWork = class MainWork {
                   {
                     breakpoint: 768,
                     settings: {
-                      arrows: false,
+                      arrows: true,
                       centerMode: true,
                       slidesToShow: 3
                     }
@@ -25,7 +25,7 @@ const MainWork = class MainWork {
                   {
                     breakpoint: 480,
                     settings: {
-                      arrows: false,
+                      arrows: true,
                       centerMode: true,
                       slidesToShow: 1
                     }
