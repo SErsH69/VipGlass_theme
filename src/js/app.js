@@ -107,7 +107,7 @@ window.app = new Vue({
             transparent: false
         });
         fluid.activate();
-        console.log(fluid);
+        // setTimeout(this.animateTitles(), 500);
     },
     computed: {
         isMobile: function () {
@@ -117,4 +117,489 @@ window.app = new Vue({
             return this.sizes.window < this.sizes.tablet && this.sizes.window > this.sizes.mobile;
         }
     },
+    methods: {
+        animateTitles() {
+            if (document.querySelectorAll(".main_prod__title")) {
+                document.querySelectorAll(".main_prod__title").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '-100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_pref__block")) {
+                document.querySelectorAll(".main_pref__block").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            y: '100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_port__subtitle")) {
+                document.querySelectorAll(".main_port__subtitle").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '-100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_port__title")) {
+                document.querySelectorAll(".main_port__title").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '-100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_stars__title")) {
+                document.querySelectorAll(".main_stars__title").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '-100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_numbers__title")) {
+                document.querySelectorAll(".main_numbers__title").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '-100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_numbers__img")) {
+                document.querySelectorAll(".main_numbers__img").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                markers: true,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '-100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_numbers__block")) {
+                document.querySelectorAll(".main_numbers__block").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_none__title")) {
+                document.querySelectorAll(".main_none__title").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '-100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_none__blocks")) {
+                document.querySelectorAll(".main_none__blocks").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_work__title")) {
+                document.querySelectorAll(".main_work__title").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            y: '100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_equip__title")) {
+                document.querySelectorAll(".main_equip__title").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '-100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_equip__block")) {
+                document.querySelectorAll(".main_equip__block").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            y: '100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_equip__items")) {
+                document.querySelectorAll(".main_equip__items").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            y: '100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_rewievs__title")) {
+                document.querySelectorAll(".main_rewievs__title").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '-100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_face__title")) {
+                document.querySelectorAll(".main_face__title").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '-100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_face__text")) {
+                document.querySelectorAll(".main_face__text").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '-100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_face__info")) {
+                document.querySelectorAll(".main_face__info").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_blocks__block")) {
+                document.querySelectorAll(".main_blocks__block").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            y: '100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_difficult__title")) {
+                document.querySelectorAll(".main_difficult__title").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '-100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_calc__in")) {
+                document.querySelectorAll(".main_calc__in").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            y: '100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_form__title")) {
+                document.querySelectorAll(".main_form__title").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '-100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_form__pref--block")) {
+                document.querySelectorAll(".main_form__pref--block").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '-100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+            if (document.querySelectorAll(".main_form__r-side")) {
+                document.querySelectorAll(".main_form__r-side").forEach((item, i) => {
+                    if (window.innerWidth > 1023) {
+                        gsap.from(item, {
+                            scrollTrigger: {
+                                trigger: item,
+                                start: () => {
+                                    return `top+=${window.innerHeight + 1000}vh top`;
+                                },
+                                end: () => {
+                                    return `top top`;
+                                },
+                            },
+                            x: '100%', // Начальная позиция за пределами экрана слева
+                            opacity: 0, // Можете добавить плавное появление
+                            duration: 2, // Продолжительность анимации
+                        });
+                    }
+                });
+            }
+        }
+    }
 });
