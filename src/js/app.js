@@ -91,7 +91,7 @@ window.app = new Vue({
             pressure: .8,
             pressure_iteration: 20,
             curl: 0,
-            emitter_size: 0.7,
+            emitter_size: 0.1,
 
             render_shaders: true,
             multi_color: true,
