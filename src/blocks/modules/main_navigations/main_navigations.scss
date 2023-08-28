@@ -11,6 +11,14 @@
     align-items: flex-start;
     justify-content: center;
     mix-blend-mode: exclusion;
+    &.isHidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    @media all and (max-width: 1023px) {
+        display: none;
+    }
     &__block {
         display: flex;
         width: vw(200);

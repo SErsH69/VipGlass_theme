@@ -165,12 +165,18 @@ const FirstBlock = class FirstBlock {
                 scrub: 1,
                 onEnter: () => {
                     document.querySelector('.content').classList.add('allBlocksHidden');
+                    document.querySelector('.main_navigations').classList.add('isHidden');
+                    document.querySelector('.header__burger--menu').classList.add('isHidden');
                 },
                 onLeave: () => {
                     document.querySelector('.content').classList.remove('allBlocksHidden');
+                    document.querySelector('.main_navigations').classList.remove('isHidden');
+                    document.querySelector('.header__burger--menu').classList.remove('isHidden');
                 },
                 onEnterBack() {
                     document.querySelector('.content').classList.add('allBlocksHidden');
+                    document.querySelector('.main_navigations').classList.add('isHidden');
+                    document.querySelector('.header__burger--menu').classList.add('isHidden');
                 },
             },
             scale: 1,

@@ -133,6 +133,30 @@
         @media all and (max-width: 1023px) {
             display: block;
         }
+        &--menu {
+            &.isHidden {
+                display: none;
+            }
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                margin-bottom: 20px;
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+                    }
+                    a {
+                        color: var(--txt-body, #28285C);
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 600;
+                        letter-spacing: 0.8px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
         &--icon {
             cursor: pointer;
             width: 30px;

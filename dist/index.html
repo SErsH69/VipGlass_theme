@@ -7,13 +7,13 @@
     <title>Главная</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap&_v=20230828023622" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?_v=20230828023622">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap&_v=20230828090121" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?_v=20230828090121">
 
 </head>
 <body>    
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
-        <div class="main_navigations">
+        <div class="main_navigations isHidden">
     <a href="#main_slider" class="main_navigations__block isActive">
         <div class="main_navigations__circle"></div>
         <div class="main_navigations__title">Неповторимые зеркальные панно</div>
@@ -67,8 +67,7 @@
         <div class="main_navigations__title">Гарантируем блестящую <br>реализацию вашего проекта</div>
     </a>
 </div>
-        <div class="header_first">
-            <header class="header center_block isFix">
+        <header class="header center_block isFix">
     <a href="/" class="header__logo">
         <img src="./img/logo.svg" alt="">
     </a>
@@ -195,6 +194,24 @@
                 <div class="header__burger--close" @click.prevent="header.toogleMobileMenu.apply(header)"></div>
             </div>
             <div class="header__burger--info">
+                <nav class="header__burger--tel header__burger--menu isHidden">
+                    <span>Меню:</span>
+                    <ul>
+                        <li><a href="#main_slider">Неповторимые зеркальные панно</a></li>
+                        <li><a href="#main_prod">Создаём эксклюзивные изделия на заказ</a></li>
+                        <li><a href="#main_port">Наше портфолио</a></li>
+                        <li><a href="#main_stars">Нас выбирают настоящие звёзды</a></li>
+                        <li><a href="#main_numbers">Цифры, которые говорят <br>о нас больше,чем слова</a></li>
+                        <li><a href="#main_none">Как мы не делаем</a></li>
+                        <li><a href="#main_work" @click.prevent="header.toogleMobileMenu.apply(header)">Как мы выполняем свою работу</a></li>
+                        <li><a href="#main_equip">Оборудование</a></li>
+                        <li><a href="#main_rewievs">Отзывы наших заказчиков</a></li>
+                        <li><a href="#main_face">Лицо компании</a></li>
+                        <li><a href="#main_blocks">Преимущества</a></li>
+                        <li><a href="#main_difficult">Выполняем раскрой материала <br>и обработку любой сложности</a></li>
+                        <li><a href="#main_form">Гарантируем блестящую <br>реализацию вашего проекта</a></li>
+                    </ul>
+                </nav>
                 <div class="header__burger--tel">
                     <span>Адрес:</span>
                     <div>г. Люберцы, ул. 65 лет Победы, д.1 лит. 2д</div>
@@ -320,6 +337,7 @@
         </div>
     </div>
 </header>
+        <div class="header_first">
             <section class="first_block block black" id="first_block">
     <div class="first_block__fluid">
         <canvas id="canvas" style="width: 100%; height: 100vh; filter: hue-rotate(190deg);"></canvas>
@@ -1972,7 +1990,7 @@
 </div>
 <!-- main_rewievs end -->
     </div>
-    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js?_v=20230828023622"></script>
-    <script src="js/app.min.js?_v=20230828023622"></script>
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js?_v=20230828090121"></script>
+    <script src="js/app.min.js?_v=20230828090121"></script>
 </body>
 </html>

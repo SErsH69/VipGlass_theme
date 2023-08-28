@@ -14,8 +14,8 @@
 <body>    
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
         @@include('blocks/modules/main_navigations/main_navigations.html', {})
+        @@include('blocks/modules/header/header.html', {})
         <div class="header_first">
-            @@include('blocks/modules/header/header.html', {})
             @@include('blocks/modules/first_block/first_block.html', {})
         </div>
         <main class="content allBlocksHidden">
