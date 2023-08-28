@@ -107,7 +107,7 @@ window.app = new Vue({
             transparent: false
         });
         fluid.activate();
-        // setTimeout(this.animateTitles(), 500);
+        setTimeout(this.animateTitles(), 2000);
     },
     computed: {
         isMobile: function () {
@@ -125,12 +125,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '-100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -145,12 +141,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             y: '100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -165,12 +157,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '-100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -185,12 +173,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '-100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -205,12 +189,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '-100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -225,12 +205,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '-100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -245,13 +221,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                markers: true,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '-100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -266,12 +237,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -286,12 +253,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '-100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -306,12 +269,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -326,12 +285,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             y: '100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -346,12 +301,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '-100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -366,12 +317,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             y: '100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -386,12 +333,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             y: '100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -406,12 +349,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '-100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -426,12 +365,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '-100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -446,12 +381,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '-100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -466,12 +397,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -486,12 +413,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             y: '100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -506,12 +429,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '-100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -526,12 +445,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             y: '100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -546,12 +461,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '-100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -566,12 +477,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '-100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
@@ -586,12 +493,8 @@ window.app = new Vue({
                         gsap.from(item, {
                             scrollTrigger: {
                                 trigger: item,
-                                start: () => {
-                                    return `top+=${window.innerHeight + 1000}vh top`;
-                                },
-                                end: () => {
-                                    return `top top`;
-                                },
+                                start: "top top",
+                                end: "bottom top",
                             },
                             x: '100%', // Начальная позиция за пределами экрана слева
                             opacity: 0, // Можете добавить плавное появление
