@@ -535,9 +535,12 @@ section:not(.main_slider) {
   transition: unset;
 }
 
-.content.allBlocksHidden .content__perspective > section:not(.main_slider) {
+.content.allBlocksHidden .content__perspective > section:not(.main_slider),
+.content.allBlocksHidden footer {
   opacity: 0;
   visibility: hidden;
+  height: 0;
+  overflow: hidden;
 }
 
 .content.allBlocksHidden .content__perspective {
@@ -920,7 +923,7 @@ textarea {
 }
 
 .first_block {
-  height: 200vh;
+  height: 100vh;
   margin-bottom: 2.0833333333vw;
   position: relative;
   padding-top: 4.375vw;

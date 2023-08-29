@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
-import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader.js';
+
 import { gsap } from "gsap";
 
 
@@ -41,7 +41,7 @@ const FirstBlock = class FirstBlock {
 
             const skyColor = 0xB1E1FF; // light blue
             const groundColor = 0xB97A20; // brownish orange
-            const intensity = 2;
+            const intensity = 5;
             const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
             scene.add(light);
 
@@ -49,7 +49,7 @@ const FirstBlock = class FirstBlock {
 
         {
 
-            const light = new THREE.DirectionalLight(0xfff0dd, 1);
+            const light = new THREE.DirectionalLight(0xfff0dd, 10);
             light.position.set(0, 5, 10);
             scene.add(light);
 
@@ -82,31 +82,31 @@ const FirstBlock = class FirstBlock {
         {
 
             const material = new THREE.MeshStandardMaterial({
-                color: 'lightblue',
+                color: 'white',
                 transparent: true,
                 opacity: 0.4,
-                metalness: 0.8,
-                roughness: 1,
+                metalness: 1,
+                roughness: 0.2,
+                transmission: 1
+            });
+            const material_shadow = new THREE.MeshStandardMaterial({
+                color: 'white',
+                transparent: true,
+                opacity: 0.1,
+                metalness: 1,
+                roughness: 0.2,
                 transmission: 1
             });
 
+
             const objLoader = new OBJLoader();
 
-            objLoader.load('files/model.obj', (root) => {
+            objLoader.load('files/model2.obj', (root) => {
                 globalModel = root;
-
-                // console.log(globalModel);
-
-                globalModel.traverse(function (child) {
-                    console.log(child);
-                    if (child instanceof THREE.Mesh) {
-
-                        child.material = material;
-                        // child.texture = texture;
-
-                    }
-
-                });
+                globalModel.children[0].material = material;
+                globalModel.children[1].material = material_shadow;
+                globalModel.children[1].position.y = -0.2;
+                globalModel.children[1].rotation.x = -1.1;
                 scene.add(globalModel);
 
                 requestAnimationFrame(render);
@@ -133,18 +133,6 @@ const FirstBlock = class FirstBlock {
             }
             renderer.render(scene, camera);
             requestAnimationFrame(render);
-            // if (globalModel) {
-            //     globalModel.traverse(function (child) {
-
-            //         if (child instanceof THREE.Mesh) {
-
-            //             child.texture.offset.x = child.texture.offset.x + 0.0001; // 0.0 - 1.0
-            //             child.texture.offset.y = child.texture.offset.y + 0.0001; // 0.0 - 1.0
-
-            //         }
-
-            //     });
-            // }
         }
 
 
@@ -157,7 +145,7 @@ const FirstBlock = class FirstBlock {
                 // markers: true,
                 pin: true,
                 start: () => {
-                    return `top-=${window.innerHeight / 2} top`;
+                    return `top-=${window.innerHeight / 7} top`;
                 },
                 end: () => {
                     return `top+=2000 top`;

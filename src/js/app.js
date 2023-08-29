@@ -86,12 +86,12 @@ window.app = new Vue({
             paused: false,
             embedded_dither: false,
 
-            dissipation: .97,
-            velocity: .98,
-            pressure: .8,
+            dissipation: .98,
+            velocity: 1,
+            pressure: 0,
             pressure_iteration: 20,
-            curl: 0,
-            emitter_size: 0.1,
+            curl: 1,
+            emitter_size: 1,
 
             render_shaders: true,
             multi_color: true,
@@ -101,26 +101,26 @@ window.app = new Vue({
             bloom_resolution: 256,
             intensity: 0.8,
             threshold: 0.6,
-            soft_knee: 0.7,
+            soft_knee: 0,
 
             background_color: { r: 0, g: 0, b: 0 },
-            transparent: false
+            transparent: true
         });
         fluid.activate();
         // setTimeout(this.animateTitles(), 2000);
         var wow = new WOW(
             {
-              boxClass:     'wow',      // animated element css class (default is wow)
-              animateClass: 'animated', // animation css class (default is animated)
-              offset:       0,          // distance to the element when triggering the animation (default is 0)
-              mobile:       true,       // trigger animations on mobile devices (default is true)
-              live:         true,       // act on asynchronously loaded content (default is true)
-              callback:     function(box) {
-                // the callback is fired every time an animation is started
-                // the argument that is passed in is the DOM node being animated
-              },
-              scrollContainer: null,    // optional scroll container selector, otherwise use window,
-              resetAnimation: true,     // reset animation on end (default is true)
+                boxClass: 'wow',      // animated element css class (default is wow)
+                animateClass: 'animated', // animation css class (default is animated)
+                offset: 0,          // distance to the element when triggering the animation (default is 0)
+                mobile: true,       // trigger animations on mobile devices (default is true)
+                live: true,       // act on asynchronously loaded content (default is true)
+                callback: function (box) {
+                    // the callback is fired every time an animation is started
+                    // the argument that is passed in is the DOM node being animated
+                },
+                scrollContainer: null,    // optional scroll container selector, otherwise use window,
+                resetAnimation: true,     // reset animation on end (default is true)
             }
         );
         wow.init();

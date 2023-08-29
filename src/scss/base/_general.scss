@@ -49,11 +49,12 @@ section:not(.main_slider) {
     // background: #fff;
     // margin-top: -800vh;
     
-    &.allBlocksHidden &__perspective > section:not(.main_slider) {
+    &.allBlocksHidden &__perspective > section:not(.main_slider),
+    &.allBlocksHidden footer {
         opacity: 0;
         visibility: hidden;
-        // height: 0;
-        // overflow: hidden;
+        height: 0;
+        overflow: hidden;
     }
     &.allBlocksHidden &__perspective {
         transform: scale(0) rotateY(90deg);        
