@@ -22,6 +22,8 @@ const FirstBlock = class FirstBlock {
         const near = 0.1;
         const far = 100;
         const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+        var waves_ctx;
+        console.log(waves_ctx);
         var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
         // var screenHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
@@ -34,8 +36,13 @@ const FirstBlock = class FirstBlock {
         }
         camera.rotation.set(-0.05018101139354198, -0.00015137332018180972, -0.000007602448675014163);
         let globalModel;
+        let bgMesh;
 
         const scene = new THREE.Scene();
+
+
+
+        scene.background = new THREE.CanvasTexture(document.getElementById('canvas'));
 
         {
 
@@ -49,9 +56,19 @@ const FirstBlock = class FirstBlock {
 
         {
 
-            const light = new THREE.DirectionalLight(0xfff0dd, 10);
-            light.position.set(0, 5, 10);
+            const light = new THREE.DirectionalLight(0x0000ff, 10);
+            light.position.set(-10, -10, -10);
             scene.add(light);
+
+
+            const light2 = new THREE.DirectionalLight(0x0fa6ca, 10);
+            light2.position.set(0.048613096583193814, 0.5789306422842851, 3.8393410178578407);
+            scene.add(light2);
+
+
+            const al = new THREE.AmbientLight(0xffffff);
+            al.intensity = 1;
+            scene.add(al);
 
         }
 
@@ -81,14 +98,29 @@ const FirstBlock = class FirstBlock {
         }
         {
 
-            const material = new THREE.MeshStandardMaterial({
-                color: '#16a1c7',
-                transparent: true,
-                opacity: 0.4,
-                metalness: 1,
-                roughness: 0.2,
-                transmission: 1
+            // let ang_rad = camera.fov * Math.PI / 180;
+            // let fov_y = camera.position.z * Math.tan(ang_rad / 2) * 2;
+            // const bgGeometry = new THREE.PlaneGeometry(fov_y * camera.aspect, fov_y);
+            // const bgMaterial = new THREE.MeshBasicMaterial({ map: texture });
+            // bgMesh = new THREE.Mesh(bgGeometry, bgMaterial);
+            // bgMesh.position.set(0, 0, 0);
+            // scene.add(bgMesh);
+
+            const material = new THREE.MeshPhysicalMaterial({
+                roughness: 0,
+                transmission: 1,
+                thickness: 0.5, // Add refraction!
             });
+
+
+            // const material = new THREE.MeshStandardMaterial({
+            //     color: '#16a1c7',
+            //     transparent: true,
+            //     opacity: 0.4,
+            //     metalness: 1,
+            //     roughness: 0.2,
+            //     transmission: 1
+            // });
             const material_shadow = new THREE.MeshStandardMaterial({
                 color: '#16a1c7',
                 transparent: true,
@@ -101,13 +133,14 @@ const FirstBlock = class FirstBlock {
 
             const objLoader = new OBJLoader();
 
-            objLoader.load('files/model2.obj', (root) => {
+            objLoader.load('files/model_ice_mirror.obj', (root) => {
                 globalModel = root;
-                globalModel.children[0].material = material;
-                globalModel.children[1].material = material_shadow;
-                globalModel.children[1].position.y = -0.2;
-                globalModel.children[1].rotation.x = -1.1;
+                globalModel.children[1].material = material;
+                globalModel.children[0].material = material_shadow;
+                globalModel.children[0].position.y = -0.2;
+                globalModel.children[0].rotation.x = -1.3;
                 scene.add(globalModel);
+                console.log(globalModel);
 
                 requestAnimationFrame(render);
             });
@@ -122,6 +155,8 @@ const FirstBlock = class FirstBlock {
             if (needResize) {
                 renderer.setSize(width, height, false);
             }
+
+            scene.background.needsUpdate = true;
             return needResize;
         }
 
@@ -131,6 +166,7 @@ const FirstBlock = class FirstBlock {
                 camera.aspect = canvas.clientWidth / canvas.clientHeight;
                 camera.updateProjectionMatrix();
             }
+
             renderer.render(scene, camera);
             requestAnimationFrame(render);
         }
@@ -175,12 +211,6 @@ const FirstBlock = class FirstBlock {
     init() {
         this.animBlock();
         this.addRotateAnimation();
-
-        // const canvas2 = document.querySelector('#canvas2');
-        // let myFluid = new Fluid(canvas2);
-        // myFluid.activate();
-
-
     }
 }
 

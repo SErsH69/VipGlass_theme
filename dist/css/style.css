@@ -574,6 +574,10 @@ textarea {
   resize: none;
 }
 
+#canvas {
+  opacity: 0;
+}
+
 /* width */
 
 *::-webkit-scrollbar {
@@ -935,6 +939,7 @@ textarea {
   padding-top: 4.375vw;
 }
 
+.first_block__model,
 .first_block #canvas_glass {
   width: 100%;
   height: 100vh;
@@ -943,7 +948,8 @@ textarea {
   pointer-events: none;
 }
 
-.first_block__fluid {
+.first_block__fluid,
+.first_block__model {
   position: fixed;
   top: 0;
   left: 0;

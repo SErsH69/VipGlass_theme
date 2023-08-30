@@ -94,7 +94,7 @@ window.app = new Vue({
             emitter_size: 1,
 
             render_shaders: true,
-            multi_color: true,
+            multi_color: false,
 
             render_bloom: true,
             bloom_iterations: 8,
@@ -104,7 +104,7 @@ window.app = new Vue({
             soft_knee: 0,
 
             background_color: { r: 0, g: 0, b: 0 },
-            transparent: true
+            transparent: false
         });
         fluid.activate();
         // setTimeout(this.animateTitles(), 2000);

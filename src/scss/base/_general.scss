@@ -92,6 +92,10 @@ textarea {
     resize: none;
 }
 
+#canvas {
+    opacity: 0;
+}
+
 // scrollbar
 /* width */
 *::-webkit-scrollbar {
