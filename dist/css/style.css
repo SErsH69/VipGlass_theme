@@ -4258,7 +4258,7 @@ textarea {
   .main_face__text {
     max-width: 100%;
     line-height: normal;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .main_face__info {
@@ -4490,6 +4490,7 @@ textarea {
     font-size: 14px;
     line-height: normal;
     margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.4);
   }
 
   .main_form__r-side label ~ input {
@@ -4497,14 +4498,17 @@ textarea {
     padding-bottom: 30px;
     font-size: 14px;
     line-height: normal;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   }
 
   .main_form__r-side label ~ input::-moz-placeholder {
     font-size: 14px;
+    color: #fff;
   }
 
   .main_form__r-side label ~ input::placeholder {
     font-size: 14px;
+    color: #fff;
   }
 
   .main_form__r-side input[type=submit] {
@@ -4518,6 +4522,7 @@ textarea {
     font-size: 20px;
     line-height: normal;
     margin-bottom: 30px;
+    color: #fff;
   }
 
   .footer {
@@ -4836,14 +4841,21 @@ textarea {
 
   .main_work__title {
     padding-bottom: 60px;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 90px;
   }
 
   .main_work .slick-prev {
-    left: 30px;
+    right: 60px;
+    top: -105px;
+    left: unset;
   }
 
   .main_work .slick-next {
-    right: 30px;
+    right: 5px;
+    top: -105px;
+    left: unset;
   }
 
   .main_work .slick-slide.slick-center {

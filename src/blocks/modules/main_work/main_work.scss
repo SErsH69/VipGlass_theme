@@ -29,6 +29,9 @@
         }
         @media all and (max-width: 500px) {
             padding-bottom: 60px;
+            text-align: left;
+            padding-left: 15px;
+            padding-right: 90px;
         }
     }
     .slick-prev {
@@ -59,7 +62,9 @@
             // top: 50%;
         }
         @media all and (max-width: 500px) {
-            left: 30px;
+            right: 60px;
+            top: -105px;
+            left: unset;
         }
     }
     .slick-next {
@@ -90,7 +95,9 @@
             // top: 50%;
         }
         @media all and (max-width: 500px) {
-            right: 30px;
+            right: 5px;
+            top: -105px;
+            left: unset;
         }
     }
     .slick-list {
