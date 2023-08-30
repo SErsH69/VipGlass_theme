@@ -10,6 +10,9 @@
         padding-top: 40px;
         padding-bottom: 40px;
     }
+    @media all and (max-width: 500px) {
+        padding-bottom: 70px;
+    }
     &__title {
         padding-bottom: vw(30);
         color: #020202;
@@ -23,6 +26,9 @@
             line-height: normal;
             font-size: 20px;
             padding-bottom: 30px;
+        }
+        @media all and (max-width: 500px) {
+            padding-bottom: 60px;
         }
     }
     .slick-prev {
@@ -52,6 +58,9 @@
             // margin-top: -20px;
             // top: 50%;
         }
+        @media all and (max-width: 500px) {
+            left: 30px;
+        }
     }
     .slick-next {
         font-size: 0;
@@ -79,6 +88,9 @@
             height: 40px;
             // right: -20px;
             // top: 50%;
+        }
+        @media all and (max-width: 500px) {
+            right: 30px;
         }
     }
     .slick-list {
@@ -109,6 +121,9 @@
         &.slick-center {
             z-index: 1;
             width: vw(800);
+            @media all and (max-width: 500px) {
+                transform: scale(1.5);
+            }
             .main_work__block {
                 height: vw(632);
                 width: vw(773);
@@ -124,6 +139,9 @@
                     top: vw(62);
                     left: vw(5);
                     border-radius: 0;
+                    @media all and (max-width: 500px) {
+                        
+                    }
                 }
             }
         }
