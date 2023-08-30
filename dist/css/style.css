@@ -614,6 +614,7 @@ textarea {
   align-items: flex-start;
   justify-content: center;
   mix-blend-mode: exclusion;
+  pointer-events: none;
 }
 
 .main_navigations.isHidden {
@@ -628,6 +629,7 @@ textarea {
   text-decoration: none;
   height: 1.3020833333vw;
   margin: 5px 0;
+  pointer-events: all;
 }
 
 .main_navigations__block.isActive {
