@@ -82,7 +82,7 @@ const FirstBlock = class FirstBlock {
         {
 
             const material = new THREE.MeshStandardMaterial({
-                color: 'white',
+                color: '#16a1c7',
                 transparent: true,
                 opacity: 0.4,
                 metalness: 1,
@@ -90,7 +90,7 @@ const FirstBlock = class FirstBlock {
                 transmission: 1
             });
             const material_shadow = new THREE.MeshStandardMaterial({
-                color: 'white',
+                color: '#16a1c7',
                 transparent: true,
                 opacity: 0.1,
                 metalness: 1,
