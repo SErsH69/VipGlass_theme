@@ -4514,9 +4514,9 @@ textarea {
   }
 
   .main_form__pref--img {
-    width: 120px;
-    flex: 0 0 120px;
-    margin-right: 20px;
+    width: 90px;
+    flex: 0 0 90px;
+    margin-right: 10px;
   }
 
   .main_form__pref--text {
