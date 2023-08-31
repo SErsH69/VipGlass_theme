@@ -99,8 +99,10 @@ const MainPort = class MainPort {
                     slidersToInit.forEach(slider => {
                         $(slider).slick({
                             slidesToShow: 1,
-                            arrows: false,
-                            infinite: false,
+                            arrows: true,
+                            infinite: true,
+                            autoplay: true,
+                            autoplaySpeed: 3000,
                             slidesToScroll: 1,
                             dots: true
                         });
