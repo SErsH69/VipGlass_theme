@@ -178,7 +178,7 @@ const FirstBlock = class FirstBlock {
         gsap.to('.content__perspective', {
             scrollTrigger: {
                 trigger: ".content",
-                markers: true,
+                // markers: true,
                 pin: true,
                 start: () => {
                     return `top-=${window.innerHeight / 7} top`;
